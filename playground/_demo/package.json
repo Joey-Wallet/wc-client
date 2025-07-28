@@ -1,6 +1,6 @@
 {
   "name": "_demo",
-  "version": "0.0.2-b.11",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "env": "dotenv-run",

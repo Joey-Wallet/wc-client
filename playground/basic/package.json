@@ -1,6 +1,6 @@
 {
   "name": "basic",
-  "version": "0.0.2-b.11",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
