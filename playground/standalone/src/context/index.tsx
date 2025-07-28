@@ -10,6 +10,9 @@ const config = {
   projectId: 'YOUR_WALLETCONNECT_PROJECT_ID', // Obtain from https://cloud.reown.com
 };
 
-export default (props: React.PropsWithChildren) => (
+const JoeyProvider = (props: React.PropsWithChildren) => (
   <Provider config={config}>{props.children}</Provider>
 );
+
+JoeyProvider.displayName = 'JoeyProvider';
+export default JoeyProvider;

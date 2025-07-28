@@ -1,7 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { useProvider } from './page';
+
+import { useProvider } from '~/context';
 
 export default function Main() {
   const { actions, session, accounts } = useProvider();
@@ -24,7 +25,7 @@ export default function Main() {
       {session && (
         <div>
           Successfully connected!
-          {accounts && accounts.map((account) => <div>{account}</div>)}
+          {accounts && accounts.map((account, index) => <div key={index}>{account}</div>)}
         </div>
       )}
     </div>

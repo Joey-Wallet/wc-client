@@ -5,7 +5,7 @@ import * as React from 'react';
 import xrpl from 'xrpl';
 import core from '@joey-wallet/wc-client/core';
 
-import { useProvider } from '../app/page';
+import { useProvider } from '~/context';
 
 export default function Signer() {
   const { provider, session, chain, accounts } = useProvider();
@@ -42,9 +42,9 @@ export default function Signer() {
       });
 
       setResponse(JSON.stringify(response, null, 2));
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.error(e);
-      return new Error(e.message);
+      return e;
     }
   };
 
