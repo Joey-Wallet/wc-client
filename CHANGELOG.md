@@ -1,3 +1,10 @@
+## 1.0.1 (2025-07-28)
+
+### Fixes
+
+- remove missing license file prevent release ([e9ae72a](https://github.com/Joey-Wallet/wc-client/commit/e9ae72a))
+- readd license files ([6e0e527](https://github.com/Joey-Wallet/wc-client/commit/6e0e527))
+
 ## 0.0.2-b.11 (2025-07-28)
 
 ### Fixes

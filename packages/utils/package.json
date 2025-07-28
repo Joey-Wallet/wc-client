@@ -1,6 +1,6 @@
 {
   "name": "@joey-wallet/wc-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bundle of utilities and helper functions used alongside the wc packages.",
   "author": "Joey Wallet (https://joeywallet.xyz)",
   "license": "MIT",
