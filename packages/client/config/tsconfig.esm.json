@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Build",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": "..",
+    "outDir": "../dist/esm",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["../src"]
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "./config/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "paths": {
+      "~/*": ["src/*"],
+      "~/tests/*": ["tests/*"]
+    }
+  },
+  "include": ["src", "tests", "scripts", "examples"]
+}

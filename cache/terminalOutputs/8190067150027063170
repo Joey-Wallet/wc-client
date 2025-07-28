@@ -1,0 +1,76 @@
+> nx run @joey-wallet/wc-ui:build
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 build /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> pnpm prebuild && pnpm run c && pnpm postbuild
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 prebuild /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> rm -rf ./dist && rm -rf ./build
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 c /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> pnpm c:cjs & pnpm c:esm && tsc-alias
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 c:esm /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 c:cjs /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 postbuild /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE
+
+  adding: dist/ (stored 0%)
+  adding: dist/esm/ (stored 0%)
+  adding: dist/esm/src/ (stored 0%)
+  adding: dist/esm/src/scaffolding/ (stored 0%)
+  adding: dist/esm/src/scaffolding/controls.d.ts (deflated 44%)
+  adding: dist/esm/src/scaffolding/qrcode.js (deflated 60%)
+  adding: dist/esm/src/scaffolding/controls.js (deflated 61%)
+  adding: dist/esm/src/scaffolding/frame.d.ts (deflated 36%)
+  adding: dist/esm/src/scaffolding/qrcode.d.ts (deflated 43%)
+  adding: dist/esm/src/scaffolding/frame.js (deflated 54%)
+  adding: dist/esm/src/index.js (deflated 35%)
+  adding: dist/esm/src/inject.js (deflated 63%)
+  adding: dist/esm/src/inject.d.ts (deflated 30%)
+  adding: dist/esm/src/index.d.ts (deflated 20%)
+  adding: dist/cjs/ (stored 0%)
+  adding: dist/cjs/src/ (stored 0%)
+  adding: dist/cjs/src/scaffolding/ (stored 0%)
+  adding: dist/cjs/src/scaffolding/controls.d.ts (deflated 44%)
+  adding: dist/cjs/src/scaffolding/qrcode.js (deflated 62%)
+  adding: dist/cjs/src/scaffolding/controls.js (deflated 62%)
+  adding: dist/cjs/src/scaffolding/frame.d.ts (deflated 36%)
+  adding: dist/cjs/src/scaffolding/qrcode.d.ts (deflated 43%)
+  adding: dist/cjs/src/scaffolding/frame.js (deflated 56%)
+  adding: dist/cjs/src/index.js (deflated 36%)
+  adding: dist/cjs/src/inject.js (deflated 62%)
+  adding: dist/cjs/src/inject.d.ts (deflated 30%)
+  adding: dist/cjs/src/index.d.ts (deflated 20%)
+  adding: src/ (stored 0%)
+  adding: src/scaffolding/ (stored 0%)
+  adding: src/scaffolding/frame.ts (deflated 47%)
+  adding: src/scaffolding/qrcode.ts (deflated 52%)
+  adding: src/scaffolding/controls.ts (deflated 55%)
+  adding: src/inject.ts (deflated 60%)
+  adding: src/index.ts (deflated 35%)
+  adding: src/controllers/ (stored 0%)
+  adding: package.json (deflated 66%)
+  adding: tsconfig.json (deflated 50%)
+  adding: eslint.config.js (deflated 20%)
+  adding: config/ (stored 0%)
+  adding: config/knip.json (deflated 32%)
+  adding: config/tsconfig.base.json (deflated 55%)
+  adding: config/release.config.cjs (deflated 61%)
+  adding: config/prettier.config.js (deflated 24%)
+  adding: config/tsconfig.esm.json (deflated 48%)
+  adding: config/tsconfig.test.json (deflated 45%)
+  adding: config/tsconfig.build.json (deflated 40%)
+  adding: config/tsconfig.cjs.json (deflated 48%)
+  adding: config/eslint.config.js (deflated 69%)
+  adding: config/jest.config.ts (deflated 49%)
+  adding: LICENSE (deflated 41%)

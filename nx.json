@@ -1,0 +1,181 @@
+{
+  "parallel": 10,
+  "cacheDirectory": ".nx/cache",
+  "cli": {
+    "warnings": {
+      "versionMismatch": true
+    },
+    "packageManager": "pnpm",
+    "analytics": false
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/src/test-setup.[jt]s"
+    ]
+  },
+  "targetDefaults": {
+    "prepack": {
+      "inputs": ["default"],
+      "dependsOn": [
+        {
+          "target": "prepack",
+          "params": "forward"
+        }
+      ],
+      "cache": true,
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "build": {
+      "inputs": ["production", "^production"],
+      "dependsOn": [
+        {
+          "dependencies": true,
+          "target": "build",
+          "params": "forward"
+        },
+        "prepack",
+        "format"
+      ],
+      "outputs": [
+        "{projectRoot}/dist",
+        "{projectRoot}/build",
+        "{projectRoot}/public/build",
+        "{projectRoot}/.next"
+      ],
+      "cache": true
+    },
+    "test": {
+      "inputs": ["default"],
+      "dependsOn": ["prepack", "build"],
+      "cache": true
+    },
+    "format": {
+      "inputs": ["default"],
+      "dependsOn": ["prepack"],
+      "cache": true
+    },
+    "dev": {
+      "inputs": ["default"],
+      "dependsOn": ["prepack, build"],
+      "cache": true
+    },
+    "lint": {
+      "inputs": ["default"],
+      "cache": true
+    },
+    "deploy": {
+      "dependsOn": ["build", "test", "format", "lint"]
+    },
+    "pub": {
+      "dependsOn": [
+        {
+          "target": "pub",
+          "params": "forward"
+        },
+        "prepack",
+        {
+          "target": "build",
+          "params": "forward"
+        },
+        "test",
+        "format"
+      ],
+      "configurations": {
+        "beta": {
+          "args": "--tag=beta"
+        },
+        "next": {
+          "args": "--tag next"
+        },
+        "release": {
+          "args": "--access public"
+        },
+        "defaultConfiguration": "beta"
+      }
+    }
+  },
+  "release": {
+    "projects": ["packages/*", "playground/*"],
+    "releaseTagPattern": "{version}",
+    "conventionalCommits": {
+      "types": {
+        "feat": {
+          "semverBump": "minor",
+          "changelog": {
+            "title": "Features"
+          }
+        },
+        "fix": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Fixes"
+          }
+        },
+        "docs": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Documentation Changes"
+          }
+        },
+        "chore": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Chores"
+          }
+        },
+        "bump": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Bump Dependencies"
+          }
+        },
+        "__INVALID__": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Uncategorized Changes"
+          }
+        }
+      }
+    },
+    "version": {
+      "generatorOptions": {
+        "skipLockFileUpdate": true,
+        "fallbackCurrentVersionResolver": "disk",
+        "updateDependents": "inherit"
+      },
+      "conventionalCommits": true
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "renderOptions": {
+          "authors": false,
+          "mapAuthorsToGitHubUsernames": true,
+          "commitReferences": true,
+          "versionTitleDate": true
+        }
+      },
+      "projectChangelogs": {
+        "renderOptions": {
+          "authors": false,
+          "mapAuthorsToGitHubUsernames": true,
+          "commitReferences": true,
+          "versionTitleDate": true
+        }
+      }
+    }
+  },
+  "generators": {
+    "@nx/js:library": {
+      "buildable": true
+    }
+  },
+  "extends": "nx/presets/npm.json"
+}

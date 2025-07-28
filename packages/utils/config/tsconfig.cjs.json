@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Build",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": "..",
+    "outDir": "../dist/cjs",
+    "module": "CommonJS",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["../src"]
+}

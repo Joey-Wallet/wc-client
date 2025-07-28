@@ -1,0 +1,5 @@
+/* app.css */
+@import '../styles/theme.css';
+
+@import '../styles/root.css';
+@import '../styles/scrollbar.css';

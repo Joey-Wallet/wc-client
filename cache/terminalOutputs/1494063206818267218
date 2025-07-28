@@ -1,0 +1,7 @@
+> nx run @joey-wallet/wc-core:format
+
+
+> @joey-wallet/wc-core@0.0.2-b.11 format /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/core
+> prettier 'src' --write --list-different
+
+src/adapter/chains.ts[2K[1Gsrc/common/base.ts[2K[1Gsrc/common/constants/chains/index.ts[2K[1Gsrc/common/constants/chains/xrpl.ts[2K[1Gsrc/common/constants/index.ts[2K[1Gsrc/common/constants/metadata.ts[2K[1Gsrc/common/constants/wallets/index.ts[2K[1Gsrc/common/index.ts[2K[1Gsrc/common/methods.ts[2K[1Gsrc/common/opts.ts[2K[1Gsrc/index.ts[2K[1Gsrc/manager.ts[2K[1Gsrc/methods/index.ts[2K[1Gsrc/methods/signTransaction.ts[2K[1Gsrc/methods/signTransactionBatch.ts[2K[1Gsrc/methods/signTransactionFee.ts[2K[1Gsrc/methods/signTransactionFor.ts[2K[1Gsrc/provider/api.ts[2K[1Gsrc/provider/index.ts[2K[1Gsrc/root.ts[2K[1Gsrc/session.ts[2K[1Gsrc/store/index.ts[2K[1Gsrc/typings/chain.ts[2K[1Gsrc/typings/config.ts[2K[1Gsrc/typings/connect.ts[2K[1Gsrc/typings/events.ts[2K[1Gsrc/typings/index.ts[2K[1Gsrc/typings/other.ts[2K[1Gsrc/utils/config.ts[2K[1Gsrc/utils/connect.ts[2K[1Gsrc/utils/general.ts[2K[1Gsrc/utils/index.ts[2K[1Gsrc/utils/namespace.ts[2K[1Gsrc/utils/session.ts[2K[1Gsrc/utils/storage.ts[2K[1G

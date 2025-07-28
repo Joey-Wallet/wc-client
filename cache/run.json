@@ -1,0 +1,120 @@
+{
+  "run": {
+    "command": "nx run-many -t build --projects=packages/*",
+    "startTime": "2025-07-28T18:38:35.729Z",
+    "endTime": "2025-07-28T18:38:53.410Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@joey-wallet/wc-ui:format",
+      "target": "format",
+      "projectName": "@joey-wallet/wc-ui",
+      "hash": "6327670227914897653",
+      "startTime": "2025-07-28T18:38:36.150Z",
+      "endTime": "2025-07-28T18:38:38.121Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-utils:format",
+      "target": "format",
+      "projectName": "@joey-wallet/wc-utils",
+      "hash": "4843757773953920555",
+      "startTime": "2025-07-28T18:38:36.150Z",
+      "endTime": "2025-07-28T18:38:38.148Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-core:format",
+      "target": "format",
+      "projectName": "@joey-wallet/wc-core",
+      "hash": "1494063206818267218",
+      "startTime": "2025-07-28T18:38:36.150Z",
+      "endTime": "2025-07-28T18:38:38.153Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-client:format",
+      "target": "format",
+      "projectName": "@joey-wallet/wc-client",
+      "hash": "11701129102928396445",
+      "startTime": "2025-07-28T18:38:36.150Z",
+      "endTime": "2025-07-28T18:38:38.215Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-react:format",
+      "target": "format",
+      "projectName": "@joey-wallet/wc-react",
+      "hash": "2133039547301066931",
+      "startTime": "2025-07-28T18:38:36.150Z",
+      "endTime": "2025-07-28T18:38:38.227Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-ui:build",
+      "target": "build",
+      "projectName": "@joey-wallet/wc-ui",
+      "hash": "8190067150027063170",
+      "startTime": "2025-07-28T18:38:38.135Z",
+      "endTime": "2025-07-28T18:38:42.486Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-utils:build",
+      "target": "build",
+      "projectName": "@joey-wallet/wc-utils",
+      "hash": "5015822614399988948",
+      "startTime": "2025-07-28T18:38:38.157Z",
+      "endTime": "2025-07-28T18:38:42.496Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-core:build",
+      "target": "build",
+      "projectName": "@joey-wallet/wc-core",
+      "hash": "7305131999036299264",
+      "startTime": "2025-07-28T18:38:42.519Z",
+      "endTime": "2025-07-28T18:38:46.365Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-react:build",
+      "target": "build",
+      "projectName": "@joey-wallet/wc-react",
+      "hash": "18063883331545881362",
+      "startTime": "2025-07-28T18:38:46.408Z",
+      "endTime": "2025-07-28T18:38:50.107Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@joey-wallet/wc-client:build",
+      "target": "build",
+      "projectName": "@joey-wallet/wc-client",
+      "hash": "14554345322942166440",
+      "startTime": "2025-07-28T18:38:50.121Z",
+      "endTime": "2025-07-28T18:38:53.400Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+> nx run @joey-wallet/wc-client:format
+
+
+> @joey-wallet/wc-client@0.0.2-b.11 format /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> prettier 'src' --write --list-different
+
+src/core.ts[2K[1Gsrc/index.ts[2K[1Gsrc/react.ts[2K[1Gsrc/utils.ts[2K[1G

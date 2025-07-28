@@ -1,0 +1,7 @@
+> nx run @joey-wallet/wc-utils:format
+
+
+> @joey-wallet/wc-utils@0.0.2-b.11 format /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/utils
+> prettier 'src' --write --list-different
+
+src/helpers/abbreviate.ts[2K[1Gsrc/helpers/index.ts[2K[1Gsrc/helpers/sleep.ts[2K[1Gsrc/helpers/string.ts[2K[1Gsrc/index.ts[2K[1Gsrc/lib/catch.ts[2K[1Gsrc/lib/chain.ts[2K[1Gsrc/lib/debounce.ts[2K[1Gsrc/lib/identifiers.ts[2K[1Gsrc/lib/index.ts[2K[1Gsrc/lib/promise.ts[2K[1Gsrc/lib/recursive.ts[2K[1Gsrc/lib/trace.ts[2K[1Gsrc/logger/advanced.ts[2K[1Gsrc/logger/index.ts[2K[1G

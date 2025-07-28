@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('./fonts/AvenirNext/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+  font-family: 'AvenirNextDemi';
+  src: url('./fonts/AvenirNext/AvenirNextLTPro-DemiCn.otf');
+}
+
+@font-face {
+  font-family: 'AvenirNextBold';
+  src: url('./fonts/AvenirNext/AvenirNextLTPro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'AvenirNextReg';
+  src: url('./fonts/AvenirNext/AvenirNextLTPro-It.otf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-named-instance: 'Regular';
+  src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'MontserratAlt';
+  src: url('./fonts/MontserratAlt/MontserratAlternates-Regular.ttf');
+}
+
+.font-thin {
+  font-variation-settings: 'wght' 100;
+}
+
+.font-extralight {
+  font-variation-settings: 'wght' 200;
+}
+
+.font-light {
+  font-variation-settings: 'wght' 300;
+}
+
+.font-normal {
+  font-variation-settings: 'wght' 400;
+}
+
+.font-medium {
+  font-variation-settings: 'wght' 500;
+}
+
+.font-semibold {
+  font-variation-settings: 'wght' 600;
+}
+
+.font-bold {
+  font-variation-settings: 'wght' 700;
+}
+
+.font-extrabold {
+  font-variation-settings: 'wght' 800;
+}
+
+.font-black {
+  font-variation-settings: 'wght' 900;
+}

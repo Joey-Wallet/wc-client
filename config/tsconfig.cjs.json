@@ -1,0 +1,29 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Build",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": "..",
+    "outDir": "../dist/cjs",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/*": ["src/*"],
+      "@first-ledger/wc-client/core": [
+        "node_modules/@first-ledger/wc-client/dist/cjs/src/core.d.ts"
+      ],
+      "@first-ledger/wc-core/utils": [
+        "node_modules/@first-ledger/wc-core/dist/cjs/src/utils/index.d.ts"
+      ],
+      "@first-ledger/wc-react/standalone": [
+        "node_modules/@first-ledger/wc-react/dist/cjs/src/standalone.d.ts"
+      ]
+    }
+  },
+  "include": ["../src"]
+}

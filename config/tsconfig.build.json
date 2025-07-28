@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Build",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": "..",
+    "outDir": "../dist",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["../src"]
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Build",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": "..",
+    "outDir": "../dist/esm",
+    "moduleResolution": "bundler",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["../src"]
+}

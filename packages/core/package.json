@@ -1,0 +1,111 @@
+{
+  "name": "@joey-wallet/wc-core",
+  "version": "0.0.2-b.11",
+  "description": "Core package for the XRP Ledger WalletConnect client.",
+  "author": "Joey Wallet (https://joeywallet.xyz)",
+  "license": "MIT",
+  "keywords": [
+    "walletconnect",
+    "module",
+    "xrpl"
+  ],
+  "packageManager": "pnpm@10.4.1",
+  "type": "module",
+  "main": "dist/cjs/src/index.js",
+  "types": "dist/cjs/src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/src/index.d.ts",
+        "default": "./dist/esm/src/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/src/index.d.ts",
+        "default": "./dist/cjs/src/index.js"
+      }
+    },
+    "./utils": {
+      "import": {
+        "types": "./dist/esm/src/utils/index.d.ts",
+        "default": "./dist/esm/src/utils/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/src/utils/index.d.ts",
+        "default": "./dist/cjs/src/utils/index.js"
+      }
+    }
+  },
+  "prettier": "./config/prettier.config.js",
+  "scripts": {
+    "env": "dotenv-run",
+    "env:prod": "dotenv-run -e production",
+    "-----": "",
+    "ts": "pnpm tsx --tsconfig config/tsconfig.test.json",
+    "---------": "",
+    "prebuild": "rm -rf ./dist && rm -rf ./build",
+    "postbuild": "rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE",
+    "c:esm": "tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json",
+    "c:cjs": "tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json",
+    "c": "pnpm c:cjs & pnpm c:esm && tsc-alias",
+    "rebuild": "pnpm run c && pnpm postbuild",
+    "rebuild:watch": "pnpm run c && pnpm postbuild",
+    "------": "",
+    "build": "pnpm prebuild && pnpm run c && pnpm postbuild",
+    "dev": "pnpm rebuild:watch",
+    "gen": "pnpm run tsnode ./scripts/gen.ts && pnpm format",
+    "--------": "",
+    "lint": "eslint src --report-unused-disable-directives",
+    "deps": "dpdm --no-warning --no-tree -T src/index.ts",
+    "format": "prettier 'src' --write --list-different",
+    "format:check": "prettier 'src' --check",
+    "-------": "",
+    "test": "pnpm jest --config ./config/jest.config.ts --all --coverage --forceExit",
+    "testOne": "pnpm jest --config ./config/jest.config.ts --coverage --forceExit"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@jest/globals": "^30.0.4",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "@types/big.js": "^6.2.2",
+    "@types/jest": "^30.0.0",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^24.0.14",
+    "@types/react": "^19.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-n": "^17.21.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "fs": "0.0.1-security",
+    "globals": "^16.3.0",
+    "jest": "^30.0.4",
+    "lodash": "^4.17.21",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.0",
+    "ts-morph": "^26.0.0",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
+  },
+  "dependencies": {
+    "@joey-wallet/wc-utils": "workspace:*",
+    "@reown/appkit": "^1.7.15",
+    "@walletconnect/types": "2.21.5",
+    "@walletconnect/universal-provider": "2.21.5",
+    "@walletconnect/utils": "2.21.5",
+    "eventemitter3": "^5.0.1",
+    "idb": "^8.0.3",
+    "xrpl": "^4.3.0",
+    "zod": "^4.0.5"
+  }
+}

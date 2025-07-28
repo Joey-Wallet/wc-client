@@ -1,0 +1,7 @@
+> nx run @joey-wallet/wc-react:format
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 format /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> prettier 'src' --write --list-different
+
+src/index.ts[2K[1Gsrc/providers/_common.ts[2K[1Gsrc/providers/advanced.tsx[2K[1Gsrc/providers/standalone.tsx[2K[1Gsrc/standalone.ts[2K[1Gsrc/typings/index.ts[2K[1G

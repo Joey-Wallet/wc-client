@@ -1,0 +1,109 @@
+> nx run @joey-wallet/wc-react:build
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 build /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> pnpm prebuild && pnpm run c && pnpm postbuild
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 prebuild /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> rm -rf ./dist && rm -rf ./build
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 c /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> pnpm c:cjs & pnpm c:esm && tsc-alias
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 c:esm /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 c:cjs /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json
+
+
+> @joey-wallet/wc-react@0.0.2-b.11 postbuild /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/react
+> rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE
+
+	zip warning: name not matched: LICENSE
+  adding: dist/ (stored 0%)
+  adding: dist/esm/ (stored 0%)
+  adding: dist/esm/config/ (stored 0%)
+  adding: dist/esm/config/tsconfig.esm.tsbuildinfo (deflated 74%)
+  adding: dist/esm/src/ (stored 0%)
+  adding: dist/esm/src/standalone.js (deflated 37%)
+  adding: dist/esm/src/providers/ (stored 0%)
+  adding: dist/esm/src/providers/advanced.js.map (deflated 79%)
+  adding: dist/esm/src/providers/advanced.d.ts.map (deflated 49%)
+  adding: dist/esm/src/providers/_common.js (deflated 70%)
+  adding: dist/esm/src/providers/standalone.js (deflated 79%)
+  adding: dist/esm/src/providers/advanced.js (deflated 76%)
+  adding: dist/esm/src/providers/advanced.d.ts (deflated 49%)
+  adding: dist/esm/src/providers/standalone.js.map (deflated 81%)
+  adding: dist/esm/src/providers/standalone.d.ts (deflated 49%)
+  adding: dist/esm/src/providers/_common.d.ts (deflated 17%)
+  adding: dist/esm/src/providers/_common.js.map (deflated 66%)
+  adding: dist/esm/src/providers/standalone.d.ts.map (deflated 49%)
+  adding: dist/esm/src/providers/_common.d.ts.map (deflated 30%)
+  adding: dist/esm/src/typings/ (stored 0%)
+  adding: dist/esm/src/typings/index.js (deflated 18%)
+  adding: dist/esm/src/typings/index.js.map (deflated 34%)
+  adding: dist/esm/src/typings/index.d.ts (deflated 65%)
+  adding: dist/esm/src/typings/index.d.ts.map (deflated 71%)
+  adding: dist/esm/src/standalone.js.map (deflated 38%)
+  adding: dist/esm/src/standalone.d.ts (deflated 51%)
+  adding: dist/esm/src/index.js (deflated 34%)
+  adding: dist/esm/src/index.js.map (deflated 37%)
+  adding: dist/esm/src/standalone.d.ts.map (deflated 36%)
+  adding: dist/esm/src/index.d.ts (deflated 50%)
+  adding: dist/esm/src/index.d.ts.map (deflated 34%)
+  adding: dist/cjs/ (stored 0%)
+  adding: dist/cjs/config/ (stored 0%)
+  adding: dist/cjs/config/tsconfig.cjs.tsbuildinfo (deflated 74%)
+  adding: dist/cjs/src/ (stored 0%)
+  adding: dist/cjs/src/standalone.js (deflated 61%)
+  adding: dist/cjs/src/providers/ (stored 0%)
+  adding: dist/cjs/src/providers/advanced.js.map (deflated 79%)
+  adding: dist/cjs/src/providers/advanced.d.ts.map (deflated 49%)
+  adding: dist/cjs/src/providers/_common.js (deflated 67%)
+  adding: dist/cjs/src/providers/standalone.js (deflated 78%)
+  adding: dist/cjs/src/providers/advanced.js (deflated 75%)
+  adding: dist/cjs/src/providers/advanced.d.ts (deflated 49%)
+  adding: dist/cjs/src/providers/standalone.js.map (deflated 81%)
+  adding: dist/cjs/src/providers/standalone.d.ts (deflated 49%)
+  adding: dist/cjs/src/providers/_common.d.ts (deflated 17%)
+  adding: dist/cjs/src/providers/_common.js.map (deflated 66%)
+  adding: dist/cjs/src/providers/standalone.d.ts.map (deflated 49%)
+  adding: dist/cjs/src/providers/_common.d.ts.map (deflated 30%)
+  adding: dist/cjs/src/typings/ (stored 0%)
+  adding: dist/cjs/src/typings/index.js (deflated 59%)
+  adding: dist/cjs/src/typings/index.js.map (deflated 37%)
+  adding: dist/cjs/src/typings/index.d.ts (deflated 65%)
+  adding: dist/cjs/src/typings/index.d.ts.map (deflated 71%)
+  adding: dist/cjs/src/standalone.js.map (deflated 37%)
+  adding: dist/cjs/src/standalone.d.ts (deflated 51%)
+  adding: dist/cjs/src/index.js (deflated 61%)
+  adding: dist/cjs/src/index.js.map (deflated 36%)
+  adding: dist/cjs/src/standalone.d.ts.map (deflated 36%)
+  adding: dist/cjs/src/index.d.ts (deflated 50%)
+  adding: dist/cjs/src/index.d.ts.map (deflated 34%)
+  adding: src/ (stored 0%)
+  adding: src/providers/ (stored 0%)
+  adding: src/providers/_common.ts (deflated 66%)
+  adding: src/providers/standalone.tsx (deflated 76%)
+  adding: src/providers/advanced.tsx (deflated 74%)
+  adding: src/typings/ (stored 0%)
+  adding: src/typings/index.ts (deflated 65%)
+  adding: src/index.ts (deflated 40%)
+  adding: src/standalone.ts (deflated 39%)
+  adding: package.json (deflated 68%)
+  adding: tsconfig.json (deflated 50%)
+  adding: eslint.config.js (deflated 20%)
+  adding: config/ (stored 0%)
+  adding: config/knip.json (deflated 32%)
+  adding: config/tsconfig.base.json (deflated 55%)
+  adding: config/prettier.config.js (deflated 24%)
+  adding: config/tsconfig.esm.json (deflated 44%)
+  adding: config/tsconfig.test.json (deflated 45%)
+  adding: config/tsconfig.build.json (deflated 40%)
+  adding: config/tsconfig.cjs.json (deflated 58%)
+  adding: config/eslint.config.js (deflated 69%)

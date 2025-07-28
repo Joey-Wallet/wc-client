@@ -1,0 +1,7 @@
+> nx run @joey-wallet/wc-ui:format
+
+
+> @joey-wallet/wc-ui@0.0.2-b.11 format /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/ui
+> prettier 'src' --write --list-different
+
+src/index.ts[2K[1Gsrc/inject.ts[2K[1Gsrc/scaffolding/controls.ts[2K[1Gsrc/scaffolding/frame.ts[2K[1Gsrc/scaffolding/qrcode.ts[2K[1G

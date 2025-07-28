@@ -1,0 +1,111 @@
+> nx run @joey-wallet/wc-client:build
+
+
+> @joey-wallet/wc-client@0.0.2-b.11 build /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> pnpm prebuild && pnpm run c && pnpm postbuild
+
+
+> @joey-wallet/wc-client@0.0.2-b.11 prebuild /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> rm -rf ./dist && rm -rf ./build
+
+
+> @joey-wallet/wc-client@0.0.2-b.11 c /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> pnpm c:cjs & pnpm c:esm && tsc-alias
+
+
+> @joey-wallet/wc-client@0.0.2-b.11 c:esm /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json
+
+
+> @joey-wallet/wc-client@0.0.2-b.11 c:cjs /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json
+
+[96msrc/index.ts[0m:[93m3[0m:[93m24[0m - [91merror[0m[90m TS2307: [0mCannot find module '@joey-wallet/wc-core/utils' or its corresponding type declarations.
+  There are types at '/Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client/node_modules/@joey-wallet/wc-core/dist/esm/src/utils/index.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+
+[7m3[0m export * as utils from '@joey-wallet/wc-core/utils';
+[7m [0m [91m                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/react.ts[0m:[93m1[0m:[93m29[0m - [91merror[0m[90m TS2307: [0mCannot find module '@joey-wallet/wc-react/standalone' or its corresponding type declarations.
+  There are types at '/Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client/node_modules/@joey-wallet/wc-react/dist/esm/src/standalone.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+
+[7m1[0m import * as standalone from '@joey-wallet/wc-react/standalone';
+[7m [0m [91m                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/utils.ts[0m:[93m1[0m:[93m24[0m - [91merror[0m[90m TS2307: [0mCannot find module '@joey-wallet/wc-core/utils' or its corresponding type declarations.
+  There are types at '/Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client/node_modules/@joey-wallet/wc-core/dist/esm/src/utils/index.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+
+[7m1[0m import * as utils from '@joey-wallet/wc-core/utils';
+[7m [0m [91m                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+Found 3 errors in 3 files.
+
+Errors  Files
+     1  src/index.ts[90m:3[0m
+     1  src/react.ts[90m:1[0m
+     1  src/utils.ts[90m:1[0m
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 2.[39m
+
+> @joey-wallet/wc-client@0.0.2-b.11 postbuild /Volumes/MOTHERSHIP/dev/Projects/joey-wallet/provider/packages/client
+> rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE
+
+  adding: dist/ (stored 0%)
+  adding: dist/esm/ (stored 0%)
+  adding: dist/esm/config/ (stored 0%)
+  adding: dist/esm/config/tsconfig.esm.tsbuildinfo (deflated 74%)
+  adding: dist/esm/src/ (stored 0%)
+  adding: dist/esm/src/core.js (deflated 9%)
+  adding: dist/esm/src/react.js (deflated 38%)
+  adding: dist/esm/src/index.js (deflated 51%)
+  adding: dist/esm/src/core.js.map (deflated 23%)
+  adding: dist/esm/src/react.d.ts (deflated 38%)
+  adding: dist/esm/src/core.d.ts (deflated 9%)
+  adding: dist/esm/src/react.d.ts.map (deflated 36%)
+  adding: dist/esm/src/utils.d.ts (deflated 11%)
+  adding: dist/esm/src/utils.d.ts.map (deflated 24%)
+  adding: dist/esm/src/index.js.map (deflated 40%)
+  adding: dist/esm/src/react.js.map (deflated 36%)
+  adding: dist/esm/src/utils.js (deflated 10%)
+  adding: dist/esm/src/utils.js.map (deflated 25%)
+  adding: dist/esm/src/core.d.ts.map (deflated 24%)
+  adding: dist/esm/src/index.d.ts (deflated 51%)
+  adding: dist/esm/src/index.d.ts.map (deflated 39%)
+  adding: dist/cjs/ (stored 0%)
+  adding: dist/cjs/config/ (stored 0%)
+  adding: dist/cjs/config/tsconfig.cjs.tsbuildinfo (deflated 74%)
+  adding: dist/cjs/src/ (stored 0%)
+  adding: dist/cjs/src/core.js (deflated 59%)
+  adding: dist/cjs/src/react.js (deflated 61%)
+  adding: dist/cjs/src/index.js (deflated 64%)
+  adding: dist/cjs/src/core.js.map (deflated 32%)
+  adding: dist/cjs/src/react.d.ts (deflated 38%)
+  adding: dist/cjs/src/core.d.ts (deflated 9%)
+  adding: dist/cjs/src/react.d.ts.map (deflated 36%)
+  adding: dist/cjs/src/utils.d.ts (deflated 11%)
+  adding: dist/cjs/src/utils.d.ts.map (deflated 24%)
+  adding: dist/cjs/src/index.js.map (deflated 36%)
+  adding: dist/cjs/src/react.js.map (deflated 34%)
+  adding: dist/cjs/src/utils.js (deflated 59%)
+  adding: dist/cjs/src/utils.js.map (deflated 34%)
+  adding: dist/cjs/src/core.d.ts.map (deflated 24%)
+  adding: dist/cjs/src/index.d.ts (deflated 51%)
+  adding: dist/cjs/src/index.d.ts.map (deflated 39%)
+  adding: src/ (stored 0%)
+  adding: src/utils.ts (deflated 11%)
+  adding: src/core.ts (deflated 9%)
+  adding: src/index.ts (deflated 60%)
+  adding: src/react.ts (deflated 44%)
+  adding: package.json (deflated 71%)
+  adding: tsconfig.json (deflated 42%)
+  adding: eslint.config.js (deflated 20%)
+  adding: config/ (stored 0%)
+  adding: config/knip.json (deflated 32%)
+  adding: config/tsconfig.base.json (deflated 55%)
+  adding: config/prettier.config.js (deflated 24%)
+  adding: config/tsconfig.esm.json (deflated 44%)
+  adding: config/tsconfig.test.json (deflated 45%)
+  adding: config/tsconfig.build.json (deflated 40%)
+  adding: config/tsconfig.cjs.json (deflated 58%)
+  adding: config/eslint.config.js (deflated 69%)
+  adding: LICENSE (deflated 42%)

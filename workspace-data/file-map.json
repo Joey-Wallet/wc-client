@@ -1,0 +1,1807 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.4",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "scripts/revert.js",
+        "hash": "8800585404264756684"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "16941668932457459453"
+      },
+      {
+        "file": "scripts/release.js",
+        "hash": "11422645560171412071"
+      },
+      {
+        "file": "docs/installation.md",
+        "hash": "4298887808398050"
+      },
+      {
+        "file": "config/jest.config.ts",
+        "hash": "14937631850420483867"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "9020414882724455473"
+      },
+      {
+        "file": "config/tsconfig.cjs.json",
+        "hash": "2087461118712928621"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4798936223742971568"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "9565712356687992460"
+      },
+      {
+        "file": "config/tsconfig.build.json",
+        "hash": "14841326303450586500"
+      },
+      {
+        "file": "config/tsconfig.test.json",
+        "hash": "3462200796059995873"
+      },
+      {
+        "file": "config/tsconfig.base.json",
+        "hash": "15832386828157560115"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "3933486563158948015"
+      },
+      {
+        "file": "eslint.config.js",
+        "hash": "3065424531510763582"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "10179064824569033144"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "7626629814992979344"
+      },
+      {
+        "file": "docs/getting-started.md",
+        "hash": "17328898308241288240"
+      },
+      {
+        "file": "config/knip.json",
+        "hash": "13343474261525912758"
+      },
+      {
+        "file": "docs/configuration.md",
+        "hash": "2834697734604068935"
+      },
+      {
+        "file": "scripts/nx-watch.sh",
+        "hash": "13848653498506224541"
+      },
+      {
+        "file": "packages/.DS_Store",
+        "hash": "10646196988533871236"
+      },
+      {
+        "file": ".env.sample",
+        "hash": "11471672550544885345"
+      },
+      {
+        "file": "package.json",
+        "hash": "10509028977109122417"
+      },
+      {
+        "file": "config/tsconfig.esm.json",
+        "hash": "10635291468357203200"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16214215949632807620"
+      },
+      {
+        "file": "docs/CONTRIBUTING.md",
+        "hash": "1762085185055570587"
+      },
+      {
+        "file": "config/eslint.config.js",
+        "hash": "1312952925384609309"
+      },
+      {
+        "file": "config/prettier.config.js",
+        "hash": "13844628766452246793"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "8344046579703383373"
+      }
+    ],
+    "projectFileMap": {
+      "quick-start": [
+        {
+          "file": "playground/quick-start/.env.example",
+          "hash": "11471672550544885345"
+        },
+        {
+          "file": "playground/quick-start/.gitignore",
+          "hash": "13913484689869071528"
+        },
+        {
+          "file": "playground/quick-start/CHANGELOG.md",
+          "hash": "3233877499485042109"
+        },
+        {
+          "file": "playground/quick-start/README.md",
+          "hash": "10766794746169900117"
+        },
+        {
+          "file": "playground/quick-start/eslint.config.mjs",
+          "hash": "11349616980964601162"
+        },
+        {
+          "file": "playground/quick-start/next.config.ts",
+          "hash": "17157214668998829023"
+        },
+        {
+          "file": "playground/quick-start/package.json",
+          "hash": "16972583545384809059",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@tailwindcss/postcss",
+            "npm:@types/node@20.19.9",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:eslint",
+            "npm:eslint-config-next@15.4.2",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "@joey-wallet/wc-client",
+            "npm:next@15.4.2",
+            "npm:react",
+            "npm:react-dom",
+            "npm:xrpl"
+          ]
+        },
+        {
+          "file": "playground/quick-start/postcss.config.mjs",
+          "hash": "535692822154927684"
+        },
+        {
+          "file": "playground/quick-start/public/file.svg",
+          "hash": "15617830351863523835"
+        },
+        {
+          "file": "playground/quick-start/public/globe.svg",
+          "hash": "9134466864871335697"
+        },
+        {
+          "file": "playground/quick-start/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "playground/quick-start/public/vercel.svg",
+          "hash": "3007623926711696394"
+        },
+        {
+          "file": "playground/quick-start/public/window.svg",
+          "hash": "16677869292061012332"
+        },
+        {
+          "file": "playground/quick-start/src/app/config.ts",
+          "hash": "10849061770306546563"
+        },
+        {
+          "file": "playground/quick-start/src/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "playground/quick-start/src/app/globals.css",
+          "hash": "18278637846079561580"
+        },
+        {
+          "file": "playground/quick-start/src/app/layout.tsx",
+          "hash": "14719723855569399261"
+        },
+        {
+          "file": "playground/quick-start/src/app/main.tsx",
+          "hash": "9513929987031446344"
+        },
+        {
+          "file": "playground/quick-start/src/app/page.tsx",
+          "hash": "16171319403246069492"
+        },
+        {
+          "file": "playground/quick-start/src/app/signer/page.tsx",
+          "hash": "11518052881762595528"
+        },
+        {
+          "file": "playground/quick-start/src/app/signer/signer.tsx",
+          "hash": "17306839507126468216"
+        },
+        {
+          "file": "playground/quick-start/src/context/index.tsx",
+          "hash": "5255177850612116015"
+        },
+        {
+          "file": "playground/quick-start/tsconfig.json",
+          "hash": "17908795992646786374"
+        }
+      ],
+      "standalone": [
+        {
+          "file": "playground/standalone/.gitignore",
+          "hash": "1867017717006394117"
+        },
+        {
+          "file": "playground/standalone/CHANGELOG.md",
+          "hash": "9744993317945919495"
+        },
+        {
+          "file": "playground/standalone/README.md",
+          "hash": "10766794746169900117"
+        },
+        {
+          "file": "playground/standalone/eslint.config.mjs",
+          "hash": "11349616980964601162"
+        },
+        {
+          "file": "playground/standalone/next.config.ts",
+          "hash": "17157214668998829023"
+        },
+        {
+          "file": "playground/standalone/package.json",
+          "hash": "13725581493103072294",
+          "deps": [
+            "npm:typescript",
+            "npm:@types/node@20.19.9",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@tailwindcss/postcss",
+            "npm:tailwindcss",
+            "npm:eslint",
+            "npm:eslint-config-next@15.4.2",
+            "npm:@eslint/eslintrc",
+            "@joey-wallet/wc-client",
+            "npm:react",
+            "npm:react-dom",
+            "npm:next@15.4.2"
+          ]
+        },
+        {
+          "file": "playground/standalone/postcss.config.mjs",
+          "hash": "535692822154927684"
+        },
+        {
+          "file": "playground/standalone/public/file.svg",
+          "hash": "15617830351863523835"
+        },
+        {
+          "file": "playground/standalone/public/globe.svg",
+          "hash": "9134466864871335697"
+        },
+        {
+          "file": "playground/standalone/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "playground/standalone/public/vercel.svg",
+          "hash": "3007623926711696394"
+        },
+        {
+          "file": "playground/standalone/public/window.svg",
+          "hash": "16677869292061012332"
+        },
+        {
+          "file": "playground/standalone/src/app/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "playground/standalone/src/app/globals.css",
+          "hash": "13803416617225302536"
+        },
+        {
+          "file": "playground/standalone/src/app/layout.tsx",
+          "hash": "3768300601413009371"
+        },
+        {
+          "file": "playground/standalone/src/app/page.tsx",
+          "hash": "3176955187271799772"
+        },
+        {
+          "file": "playground/standalone/src/context/index.tsx",
+          "hash": "5255177850612116015"
+        },
+        {
+          "file": "playground/standalone/tsconfig.json",
+          "hash": "17908795992646786374"
+        }
+      ],
+      "basic": [
+        {
+          "file": "playground/basic/.gitignore",
+          "hash": "1867017717006394117"
+        },
+        {
+          "file": "playground/basic/CHANGELOG.md",
+          "hash": "9744993317945919495"
+        },
+        {
+          "file": "playground/basic/README.md",
+          "hash": "10766794746169900117"
+        },
+        {
+          "file": "playground/basic/eslint.config.mjs",
+          "hash": "11349616980964601162"
+        },
+        {
+          "file": "playground/basic/next.config.ts",
+          "hash": "17157214668998829023"
+        },
+        {
+          "file": "playground/basic/package.json",
+          "hash": "8939956631861365394",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@tailwindcss/postcss",
+            "npm:@types/node@20.19.9",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:eslint",
+            "npm:eslint-config-next@15.4.2",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "@joey-wallet/wc-client",
+            "npm:next@15.4.2",
+            "npm:react",
+            "npm:react-dom",
+            "npm:xrpl"
+          ]
+        },
+        {
+          "file": "playground/basic/postcss.config.mjs",
+          "hash": "535692822154927684"
+        },
+        {
+          "file": "playground/basic/public/favicon.ico",
+          "hash": "9157999678830540297"
+        },
+        {
+          "file": "playground/basic/public/file.svg",
+          "hash": "15617830351863523835"
+        },
+        {
+          "file": "playground/basic/public/globe.svg",
+          "hash": "9134466864871335697"
+        },
+        {
+          "file": "playground/basic/public/next.svg",
+          "hash": "8300767200008744458"
+        },
+        {
+          "file": "playground/basic/public/vercel.svg",
+          "hash": "3007623926711696394"
+        },
+        {
+          "file": "playground/basic/public/window.svg",
+          "hash": "16677869292061012332"
+        },
+        {
+          "file": "playground/basic/src/app/globals.css",
+          "hash": "13803416617225302536"
+        },
+        {
+          "file": "playground/basic/src/app/layout.tsx",
+          "hash": "3352000934815498748"
+        },
+        {
+          "file": "playground/basic/src/app/main.tsx",
+          "hash": "12868329280440142854"
+        },
+        {
+          "file": "playground/basic/src/app/page.tsx",
+          "hash": "4554712882956216193"
+        },
+        {
+          "file": "playground/basic/src/components/signer.tsx",
+          "hash": "13428955464829646272"
+        },
+        {
+          "file": "playground/basic/src/config/index.ts",
+          "hash": "10205060780221522496"
+        },
+        {
+          "file": "playground/basic/src/context/index.tsx",
+          "hash": "13338488013450461684"
+        },
+        {
+          "file": "playground/basic/tsconfig.json",
+          "hash": "17908795992646786374"
+        }
+      ],
+      "@joey-wallet/wc-react": [
+        {
+          "file": "packages/react/.DS_Store",
+          "hash": "7202121241047953847"
+        },
+        {
+          "file": "packages/react/CHANGELOG.md",
+          "hash": "13006494007535170194"
+        },
+        {
+          "file": "packages/react/config/eslint.config.js",
+          "hash": "1312952925384609309"
+        },
+        {
+          "file": "packages/react/config/knip.json",
+          "hash": "13343474261525912758"
+        },
+        {
+          "file": "packages/react/config/prettier.config.js",
+          "hash": "13844628766452246793"
+        },
+        {
+          "file": "packages/react/config/tsconfig.base.json",
+          "hash": "15832386828157560115"
+        },
+        {
+          "file": "packages/react/config/tsconfig.build.json",
+          "hash": "14841326303450586500"
+        },
+        {
+          "file": "packages/react/config/tsconfig.cjs.json",
+          "hash": "2087461118712928621"
+        },
+        {
+          "file": "packages/react/config/tsconfig.esm.json",
+          "hash": "10635291468357203200"
+        },
+        {
+          "file": "packages/react/config/tsconfig.test.json",
+          "hash": "3462200796059995873"
+        },
+        {
+          "file": "packages/react/eslint.config.js",
+          "hash": "3065424531510763582"
+        },
+        {
+          "file": "packages/react/package.json",
+          "hash": "960833654763747492",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@jest/globals",
+            "npm:@stylistic/eslint-plugin-js",
+            "npm:@types/big.js",
+            "npm:@types/jest",
+            "npm:@types/lodash",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-config-standard-with-typescript",
+            "npm:eslint-plugin-import-x",
+            "npm:eslint-plugin-n",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-promise",
+            "npm:fs",
+            "npm:globals",
+            "npm:jest",
+            "npm:lodash",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-morph",
+            "npm:ts-node",
+            "npm:tsc-alias",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "@joey-wallet/wc-utils",
+            "@joey-wallet/wc-core",
+            "npm:@walletconnect/types@2.21.5",
+            "npm:@walletconnect/universal-provider",
+            "npm:@walletconnect/utils",
+            "npm:eventemitter3",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/react/src/index.ts",
+          "hash": "10089467393976191207"
+        },
+        {
+          "file": "packages/react/src/providers/_common.ts",
+          "hash": "15725328144013590698"
+        },
+        {
+          "file": "packages/react/src/providers/advanced.tsx",
+          "hash": "10718848883104630428"
+        },
+        {
+          "file": "packages/react/src/providers/standalone.tsx",
+          "hash": "4770006376591068889"
+        },
+        {
+          "file": "packages/react/src/standalone.ts",
+          "hash": "10775255354757462121"
+        },
+        {
+          "file": "packages/react/src/typings/index.ts",
+          "hash": "9105841208630348226"
+        },
+        {
+          "file": "packages/react/tsconfig.json",
+          "hash": "9008155693857040197"
+        }
+      ],
+      "@joey-wallet/wc-client": [
+        {
+          "file": "packages/client/CHANGELOG.md",
+          "hash": "15087518048748607666"
+        },
+        {
+          "file": "packages/client/LICENSE",
+          "hash": "1389018081174248731"
+        },
+        {
+          "file": "packages/client/README.md",
+          "hash": "17828896579749336928"
+        },
+        {
+          "file": "packages/client/config/eslint.config.js",
+          "hash": "1312952925384609309"
+        },
+        {
+          "file": "packages/client/config/knip.json",
+          "hash": "13343474261525912758"
+        },
+        {
+          "file": "packages/client/config/prettier.config.js",
+          "hash": "13844628766452246793"
+        },
+        {
+          "file": "packages/client/config/tsconfig.base.json",
+          "hash": "15832386828157560115"
+        },
+        {
+          "file": "packages/client/config/tsconfig.build.json",
+          "hash": "14841326303450586500"
+        },
+        {
+          "file": "packages/client/config/tsconfig.cjs.json",
+          "hash": "2087461118712928621"
+        },
+        {
+          "file": "packages/client/config/tsconfig.esm.json",
+          "hash": "10635291468357203200"
+        },
+        {
+          "file": "packages/client/config/tsconfig.test.json",
+          "hash": "3462200796059995873"
+        },
+        {
+          "file": "packages/client/eslint.config.js",
+          "hash": "3065424531510763582"
+        },
+        {
+          "file": "packages/client/package.json",
+          "hash": "9481822912729018440",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@jest/globals@29.7.0",
+            "npm:@stylistic/eslint-plugin-js",
+            "npm:@types/big.js",
+            "npm:@types/jest@29.5.14",
+            "npm:@types/lodash",
+            "npm:@types/node@22.16.5",
+            "npm:@types/react",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-config-standard-with-typescript",
+            "npm:eslint-plugin-import-x",
+            "npm:eslint-plugin-n@16.6.2",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-promise@6.6.0",
+            "npm:fs",
+            "npm:globals",
+            "npm:jest@29.7.0",
+            "npm:lodash",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-morph@25.0.1",
+            "npm:ts-node",
+            "npm:tsc-alias",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "@joey-wallet/wc-core",
+            "@joey-wallet/wc-react"
+          ]
+        },
+        {
+          "file": "packages/client/src/core.ts",
+          "hash": "17803354819525255264"
+        },
+        {
+          "file": "packages/client/src/index.ts",
+          "hash": "18028982975486171880"
+        },
+        {
+          "file": "packages/client/src/react.ts",
+          "hash": "12075191341692945579"
+        },
+        {
+          "file": "packages/client/src/utils.ts",
+          "hash": "6743210482180675869"
+        },
+        {
+          "file": "packages/client/tsconfig.json",
+          "hash": "17199225618646787117"
+        }
+      ],
+      "@joey-wallet/wc-ui": [
+        {
+          "file": "packages/ui/CHANGELOG.md",
+          "hash": "16581847692450471997"
+        },
+        {
+          "file": "packages/ui/LICENSE",
+          "hash": "9020414882724455473"
+        },
+        {
+          "file": "packages/ui/config/eslint.config.js",
+          "hash": "1312952925384609309"
+        },
+        {
+          "file": "packages/ui/config/jest.config.ts",
+          "hash": "14937631850420483867"
+        },
+        {
+          "file": "packages/ui/config/knip.json",
+          "hash": "13343474261525912758"
+        },
+        {
+          "file": "packages/ui/config/prettier.config.js",
+          "hash": "13844628766452246793"
+        },
+        {
+          "file": "packages/ui/config/release.config.cjs",
+          "hash": "8403949952368500450"
+        },
+        {
+          "file": "packages/ui/config/tsconfig.base.json",
+          "hash": "15832386828157560115"
+        },
+        {
+          "file": "packages/ui/config/tsconfig.build.json",
+          "hash": "14841326303450586500"
+        },
+        {
+          "file": "packages/ui/config/tsconfig.cjs.json",
+          "hash": "12687641499742738093"
+        },
+        {
+          "file": "packages/ui/config/tsconfig.esm.json",
+          "hash": "2798635342551271988"
+        },
+        {
+          "file": "packages/ui/config/tsconfig.test.json",
+          "hash": "3462200796059995873"
+        },
+        {
+          "file": "packages/ui/eslint.config.js",
+          "hash": "3065424531510763582"
+        },
+        {
+          "file": "packages/ui/package.json",
+          "hash": "15570568722079822595",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@jest/globals",
+            "npm:@stylistic/eslint-plugin-js",
+            "npm:@types/big.js",
+            "npm:@types/jest",
+            "npm:@types/lodash",
+            "npm:@types/node",
+            "npm:@types/qrcode",
+            "npm:@types/react",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:dotenv-cli",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-config-standard-with-typescript",
+            "npm:eslint-plugin-import-x",
+            "npm:eslint-plugin-n",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-promise",
+            "npm:fs",
+            "npm:globals",
+            "npm:jest",
+            "npm:lodash",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-morph",
+            "npm:ts-node",
+            "npm:tsc-alias",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:lit@3.3.1",
+            "npm:qrcode@1.5.4"
+          ]
+        },
+        {
+          "file": "packages/ui/src/index.ts",
+          "hash": "1254613237275309173"
+        },
+        {
+          "file": "packages/ui/src/inject.ts",
+          "hash": "15247619282412794754"
+        },
+        {
+          "file": "packages/ui/src/scaffolding/controls.ts",
+          "hash": "10234893979479876209"
+        },
+        {
+          "file": "packages/ui/src/scaffolding/frame.ts",
+          "hash": "12117167653809877268"
+        },
+        {
+          "file": "packages/ui/src/scaffolding/qrcode.ts",
+          "hash": "14312040798348690611"
+        },
+        {
+          "file": "packages/ui/tsconfig.json",
+          "hash": "721536582478198314"
+        }
+      ],
+      "@joey-wallet/wc-utils": [
+        {
+          "file": "packages/utils/CHANGELOG.md",
+          "hash": "9753489857452297657"
+        },
+        {
+          "file": "packages/utils/LICENSE",
+          "hash": "9020414882724455473"
+        },
+        {
+          "file": "packages/utils/config/eslint.config.js",
+          "hash": "1312952925384609309"
+        },
+        {
+          "file": "packages/utils/config/jest.config.ts",
+          "hash": "14937631850420483867"
+        },
+        {
+          "file": "packages/utils/config/knip.json",
+          "hash": "13343474261525912758"
+        },
+        {
+          "file": "packages/utils/config/prettier.config.js",
+          "hash": "13844628766452246793"
+        },
+        {
+          "file": "packages/utils/config/release.config.cjs",
+          "hash": "8403949952368500450"
+        },
+        {
+          "file": "packages/utils/config/tsconfig.base.json",
+          "hash": "15832386828157560115"
+        },
+        {
+          "file": "packages/utils/config/tsconfig.build.json",
+          "hash": "14841326303450586500"
+        },
+        {
+          "file": "packages/utils/config/tsconfig.cjs.json",
+          "hash": "2909945907447442915"
+        },
+        {
+          "file": "packages/utils/config/tsconfig.esm.json",
+          "hash": "176416762041175627"
+        },
+        {
+          "file": "packages/utils/config/tsconfig.test.json",
+          "hash": "3462200796059995873"
+        },
+        {
+          "file": "packages/utils/eslint.config.js",
+          "hash": "3065424531510763582"
+        },
+        {
+          "file": "packages/utils/package.json",
+          "hash": "8346938042417184876",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@jest/globals",
+            "npm:@stylistic/eslint-plugin-js",
+            "npm:@types/big.js",
+            "npm:@types/jest",
+            "npm:@types/lodash",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:dotenv-cli",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-config-standard-with-typescript",
+            "npm:eslint-plugin-import-x",
+            "npm:eslint-plugin-n",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-promise",
+            "npm:fs",
+            "npm:globals",
+            "npm:jest",
+            "npm:lodash",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-morph",
+            "npm:ts-node",
+            "npm:tsc-alias",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:big.js@7.0.1",
+            "npm:eventemitter3",
+            "npm:xrpl"
+          ]
+        },
+        {
+          "file": "packages/utils/src/helpers/abbreviate.ts",
+          "hash": "1664618845078526796"
+        },
+        {
+          "file": "packages/utils/src/helpers/index.ts",
+          "hash": "17145782994710114825"
+        },
+        {
+          "file": "packages/utils/src/helpers/sleep.ts",
+          "hash": "1007833280338371960"
+        },
+        {
+          "file": "packages/utils/src/helpers/string.ts",
+          "hash": "16622142376553897591"
+        },
+        {
+          "file": "packages/utils/src/index.ts",
+          "hash": "11265017296993540976"
+        },
+        {
+          "file": "packages/utils/src/lib/catch.ts",
+          "hash": "9600400256885569098"
+        },
+        {
+          "file": "packages/utils/src/lib/chain.ts",
+          "hash": "5407999519826279112"
+        },
+        {
+          "file": "packages/utils/src/lib/debounce.ts",
+          "hash": "15917544776507035446"
+        },
+        {
+          "file": "packages/utils/src/lib/identifiers.ts",
+          "hash": "7335231917800157909"
+        },
+        {
+          "file": "packages/utils/src/lib/index.ts",
+          "hash": "4063785075571098093"
+        },
+        {
+          "file": "packages/utils/src/lib/promise.ts",
+          "hash": "1901218968879150519"
+        },
+        {
+          "file": "packages/utils/src/lib/recursive.ts",
+          "hash": "4615917586455146332"
+        },
+        {
+          "file": "packages/utils/src/lib/trace.ts",
+          "hash": "9611196494044010234"
+        },
+        {
+          "file": "packages/utils/src/logger/advanced.ts",
+          "hash": "1630155629543121577"
+        },
+        {
+          "file": "packages/utils/src/logger/index.ts",
+          "hash": "7190441704879176433"
+        },
+        {
+          "file": "packages/utils/tsconfig.json",
+          "hash": "2857488128783979235"
+        }
+      ],
+      "_demo": [
+        {
+          "file": "playground/_demo/CHANGELOG.md",
+          "hash": "3530424480715137861"
+        },
+        {
+          "file": "playground/_demo/README.md",
+          "hash": "10766794746169900117"
+        },
+        {
+          "file": "playground/_demo/eslint.config.mjs",
+          "hash": "3748054028779100117"
+        },
+        {
+          "file": "playground/_demo/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "playground/_demo/next-env.d.ts",
+          "hash": "1320675027584673186"
+        },
+        {
+          "file": "playground/_demo/next.config.ts",
+          "hash": "5119037512070752907"
+        },
+        {
+          "file": "playground/_demo/package.json",
+          "hash": "444008489218146348",
+          "deps": [
+            "npm:@dotenv-run/cli",
+            "npm:@eslint/eslintrc",
+            "npm:@tailwindcss/postcss",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:eslint",
+            "npm:eslint-config-next@15.3.5",
+            "npm:prettier-plugin-tailwindcss",
+            "npm:tailwindcss",
+            "npm:tw-animate-css",
+            "npm:typescript",
+            "@joey-wallet/wc-client",
+            "npm:@hookform/resolvers",
+            "npm:@radix-ui/react-dialog",
+            "npm:@radix-ui/react-label",
+            "npm:@radix-ui/react-separator",
+            "npm:@radix-ui/react-slot",
+            "npm:@radix-ui/react-switch",
+            "npm:@radix-ui/react-tabs",
+            "npm:@radix-ui/react-tooltip",
+            "npm:@tailwindcss/typography",
+            "npm:@walletconnect/types@2.21.4",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:lucide-react",
+            "npm:next@15.3.5",
+            "npm:postcss@8.5.6",
+            "npm:qrcode.react",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-hook-form",
+            "npm:sonner",
+            "npm:tailwind-merge",
+            "npm:vaul",
+            "npm:zod@4.0.10",
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "playground/_demo/postcss.config.mjs",
+          "hash": "4766641093237987671"
+        },
+        {
+          "file": "playground/_demo/public/assets/adaptive-icon.png",
+          "hash": "14894255270208175074"
+        },
+        {
+          "file": "playground/_demo/public/assets/adaptive-wc-logo.png",
+          "hash": "14019675853818514669"
+        },
+        {
+          "file": "playground/_demo/public/assets/chains/.DS_Store",
+          "hash": "11754251492175573290"
+        },
+        {
+          "file": "playground/_demo/public/assets/chains/xahau/info/logo.jpg",
+          "hash": "13506174984838857297"
+        },
+        {
+          "file": "playground/_demo/public/assets/chains/xevm/info/logo.jpg",
+          "hash": "4513835587847595328"
+        },
+        {
+          "file": "playground/_demo/public/assets/chains/xrpl/info/logo.png",
+          "hash": "16441972891555799955"
+        },
+        {
+          "file": "playground/_demo/public/assets/chains/xrpl/info/xrp-icon-dark.png",
+          "hash": "11723126791078419323"
+        },
+        {
+          "file": "playground/_demo/public/assets/chains/xrpl/info/xrp-icon-light.png",
+          "hash": "5412023702402229883"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/apple-touch-icon.png",
+          "hash": "16579468742670603068"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/favicon-96x96.png",
+          "hash": "6824520547103200764"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/favicon.ico",
+          "hash": "13222420687250088012"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/favicon.svg",
+          "hash": "3566712180819446152"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/site.webmanifest",
+          "hash": "17265387942715415238"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/web-app-manifest-192x192.png",
+          "hash": "16813656830377898031"
+        },
+        {
+          "file": "playground/_demo/public/assets/favicon/web-app-manifest-512x512.png",
+          "hash": "10973561603230241776"
+        },
+        {
+          "file": "playground/_demo/public/assets/home-active.png",
+          "hash": "7636546042556141338"
+        },
+        {
+          "file": "playground/_demo/public/assets/home-inactive.png",
+          "hash": "1783501794780121129"
+        },
+        {
+          "file": "playground/_demo/public/assets/joey-primary.png",
+          "hash": "14802236655151379014"
+        },
+        {
+          "file": "playground/_demo/public/assets/joey-transparent.png",
+          "hash": "9281431577029637977"
+        },
+        {
+          "file": "playground/_demo/public/assets/wc-logo.png",
+          "hash": "9703513081245473513"
+        },
+        {
+          "file": "playground/_demo/src/.DS_Store",
+          "hash": "3135851917628692990"
+        },
+        {
+          "file": "playground/_demo/src/app/layout.tsx",
+          "hash": "17025734977294489865"
+        },
+        {
+          "file": "playground/_demo/src/app/page.tsx",
+          "hash": "6502411875986342352"
+        },
+        {
+          "file": "playground/_demo/src/app/styles.css",
+          "hash": "7566103195078391901"
+        },
+        {
+          "file": "playground/_demo/src/common/config.ts",
+          "hash": "770180708440898803"
+        },
+        {
+          "file": "playground/_demo/src/common/wc-config.ts",
+          "hash": "1676666192980808560"
+        },
+        {
+          "file": "playground/_demo/src/components/containers/copy/index.tsx",
+          "hash": "4297464561748817267"
+        },
+        {
+          "file": "playground/_demo/src/components/form/configuration/index.tsx",
+          "hash": "14860033050567477826"
+        },
+        {
+          "file": "playground/_demo/src/components/form/configuration/metadata.tsx",
+          "hash": "15529583641344241498"
+        },
+        {
+          "file": "playground/_demo/src/components/form/configuration/network.tsx",
+          "hash": "10804964519369392118"
+        },
+        {
+          "file": "playground/_demo/src/components/form/configuration/projectId.tsx",
+          "hash": "17190707598852286361"
+        },
+        {
+          "file": "playground/_demo/src/components/form/onboard/connect/basic.tsx",
+          "hash": "8105715353437324504"
+        },
+        {
+          "file": "playground/_demo/src/components/form/onboard/connect/index.tsx",
+          "hash": "6950195882194945008"
+        },
+        {
+          "file": "playground/_demo/src/components/form/onboard/connect/joey.tsx",
+          "hash": "9125890750409006225"
+        },
+        {
+          "file": "playground/_demo/src/components/form/onboard/index.tsx",
+          "hash": "13395931859078052951"
+        },
+        {
+          "file": "playground/_demo/src/components/form/onboard/network.tsx",
+          "hash": "14945952682077835315"
+        },
+        {
+          "file": "playground/_demo/src/components/form/session/index.tsx",
+          "hash": "1735047043595804394"
+        },
+        {
+          "file": "playground/_demo/src/components/form/session/session.tsx",
+          "hash": "16238975276372812223"
+        },
+        {
+          "file": "playground/_demo/src/components/layout/index.tsx",
+          "hash": "3781040263363883058"
+        },
+        {
+          "file": "playground/_demo/src/components/logo/index.tsx",
+          "hash": "5882817400873056151"
+        },
+        {
+          "file": "playground/_demo/src/components/nav/index.tsx",
+          "hash": "14760693046141710523"
+        },
+        {
+          "file": "playground/_demo/src/components/nav/session.tsx",
+          "hash": "17579768203226473923"
+        },
+        {
+          "file": "playground/_demo/src/components/nav/sidebar.tsx",
+          "hash": "14482595538579044193"
+        },
+        {
+          "file": "playground/_demo/src/components/splash/index.tsx",
+          "hash": "7964347774364284753"
+        },
+        {
+          "file": "playground/_demo/src/components/template/form-hook.tsx",
+          "hash": "11905999295405962118"
+        },
+        {
+          "file": "playground/_demo/src/components/template/form.tsx",
+          "hash": "15369842717242352330"
+        },
+        {
+          "file": "playground/_demo/src/components/template/frame.tsx",
+          "hash": "18437774636769169120"
+        },
+        {
+          "file": "playground/_demo/src/components/template/general.tsx",
+          "hash": "2430397824695560500"
+        },
+        {
+          "file": "playground/_demo/src/components/template/index.tsx",
+          "hash": "14344497049027170649"
+        },
+        {
+          "file": "playground/_demo/src/components/theme/index.tsx",
+          "hash": "7109960453768162948"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/alert/index.tsx",
+          "hash": "2138824967890555253"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/badge/index.tsx",
+          "hash": "18111980705359664541"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/button/index.tsx",
+          "hash": "11713414112127981387"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/dialog/index.tsx",
+          "hash": "8021276518668770432"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/drawer/index.tsx",
+          "hash": "8252064057355173621"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/form/index.tsx",
+          "hash": "8568482426696987039"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/input/index.tsx",
+          "hash": "15148104714459288495"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/label/index.tsx",
+          "hash": "9983186605228451886"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/loaders/spinner.tsx",
+          "hash": "8004043908925028460"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/separator/index.tsx",
+          "hash": "8502620538928859835"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/sidebar/index.tsx",
+          "hash": "1594374575397974137"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/sonner/index.tsx",
+          "hash": "15517469272849723341"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/switch/index.tsx",
+          "hash": "1231240703155466012"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/tabs/index.tsx",
+          "hash": "1533938106351824427"
+        },
+        {
+          "file": "playground/_demo/src/components/ui/tooltip/index.tsx",
+          "hash": "15671900968913234790"
+        },
+        {
+          "file": "playground/_demo/src/context/advanced.tsx",
+          "hash": "7961474726548498291"
+        },
+        {
+          "file": "playground/_demo/src/context/standalone.tsx",
+          "hash": "12407276167983565089"
+        },
+        {
+          "file": "playground/_demo/src/hooks/useMobileDetect.tsx",
+          "hash": "8169710964344227103"
+        },
+        {
+          "file": "playground/_demo/src/hooks/usePackageVersion.tsx",
+          "hash": "11935402576935096321"
+        },
+        {
+          "file": "playground/_demo/src/hooks/useTheme.tsx",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "playground/_demo/src/hooks/useUnifiedProvider.tsx",
+          "hash": "6724933022261124477"
+        },
+        {
+          "file": "playground/_demo/src/hooks/useVersion.tsx",
+          "hash": "6462321400440450985"
+        },
+        {
+          "file": "playground/_demo/src/lib/helpers/url.ts",
+          "hash": "1810957203867642004"
+        },
+        {
+          "file": "playground/_demo/src/lib/helpers/wait.ts",
+          "hash": "7182577512750229698"
+        },
+        {
+          "file": "playground/_demo/src/lib/utils/cn.ts",
+          "hash": "11417342504538546156"
+        },
+        {
+          "file": "playground/_demo/src/lib/utils/index.ts",
+          "hash": "4162119477999010018"
+        },
+        {
+          "file": "playground/_demo/src/lib/zustand/form.ts",
+          "hash": "12763125691955599222"
+        },
+        {
+          "file": "playground/_demo/src/lib/zustand/index.ts",
+          "hash": "2975076371819128148"
+        },
+        {
+          "file": "playground/_demo/src/styles/_fonts.css",
+          "hash": "10825597422355894478"
+        },
+        {
+          "file": "playground/_demo/src/styles/dark.css",
+          "hash": "7883949810995247506"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter-VariableFont_opsz,wght.ttf",
+          "hash": "7092351986979172380"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Black.ttf",
+          "hash": "2390266828721962277"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-BlackItalic.ttf",
+          "hash": "13234805182714998353"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Bold.ttf",
+          "hash": "15431912845654684398"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-BoldItalic.ttf",
+          "hash": "9235357606987408729"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-ExtraBold.ttf",
+          "hash": "7622877864690360331"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-ExtraBoldItalic.ttf",
+          "hash": "15953406384866725602"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-ExtraLight.ttf",
+          "hash": "15517361417444651972"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-ExtraLightItalic.ttf",
+          "hash": "6519154319588002912"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Italic.ttf",
+          "hash": "2788492899252262893"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Light.ttf",
+          "hash": "17535397100895587547"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-LightItalic.ttf",
+          "hash": "17874829471434480711"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Medium.ttf",
+          "hash": "15658514694113229933"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-MediumItalic.ttf",
+          "hash": "11258849138825082059"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Regular.ttf",
+          "hash": "10847648745911464553"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-SemiBold.ttf",
+          "hash": "42551834228948669"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf",
+          "hash": "682570165659062287"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-Thin.ttf",
+          "hash": "8365159951863454544"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_18pt-ThinItalic.ttf",
+          "hash": "15185611738224418633"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Black.ttf",
+          "hash": "1109877264299287546"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-BlackItalic.ttf",
+          "hash": "17549413085914554344"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Bold.ttf",
+          "hash": "1963817612965968624"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-BoldItalic.ttf",
+          "hash": "13735825104004619083"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-ExtraBold.ttf",
+          "hash": "10517170813994048820"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-ExtraBoldItalic.ttf",
+          "hash": "17027684319941720427"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-ExtraLight.ttf",
+          "hash": "1407730027097510265"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-ExtraLightItalic.ttf",
+          "hash": "6895371716988918405"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Italic.ttf",
+          "hash": "13536965565532163500"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Light.ttf",
+          "hash": "16952815519938783557"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-LightItalic.ttf",
+          "hash": "2241238034883939206"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Medium.ttf",
+          "hash": "11508008480040598422"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-MediumItalic.ttf",
+          "hash": "2024716445315133675"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Regular.ttf",
+          "hash": "11023754889551202127"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-SemiBold.ttf",
+          "hash": "7090888527009002064"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-SemiBoldItalic.ttf",
+          "hash": "1095266060200299127"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-Thin.ttf",
+          "hash": "11505102118963534070"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_24pt-ThinItalic.ttf",
+          "hash": "10131754558557012308"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Black.ttf",
+          "hash": "5640160644886349211"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-BlackItalic.ttf",
+          "hash": "4094745296219301750"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Bold.ttf",
+          "hash": "13906404763558392200"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-BoldItalic.ttf",
+          "hash": "16196042276814214170"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-ExtraBold.ttf",
+          "hash": "4080673416025069703"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-ExtraBoldItalic.ttf",
+          "hash": "17896077659907407715"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-ExtraLight.ttf",
+          "hash": "15936440558996954875"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-ExtraLightItalic.ttf",
+          "hash": "6281883428325720578"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Italic.ttf",
+          "hash": "13295940431507089458"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Light.ttf",
+          "hash": "14742054847152607841"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-LightItalic.ttf",
+          "hash": "8632608974099414379"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Medium.ttf",
+          "hash": "4690877162437796191"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-MediumItalic.ttf",
+          "hash": "8693125704411867069"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Regular.ttf",
+          "hash": "12464175069835869160"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-SemiBold.ttf",
+          "hash": "14183261011103217105"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-SemiBoldItalic.ttf",
+          "hash": "661965066950094812"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-Thin.ttf",
+          "hash": "213657311175464171"
+        },
+        {
+          "file": "playground/_demo/src/styles/fonts/Inter/Inter_28pt-ThinItalic.ttf",
+          "hash": "15748554519593223196"
+        },
+        {
+          "file": "playground/_demo/src/styles/globals.css",
+          "hash": "3857326642282393456"
+        },
+        {
+          "file": "playground/_demo/src/styles/light.css",
+          "hash": "15791662656476682320"
+        },
+        {
+          "file": "playground/_demo/src/styles/root.css",
+          "hash": "11249296729613899055"
+        },
+        {
+          "file": "playground/_demo/src/styles/scrollbar.css",
+          "hash": "16788686103072819536"
+        },
+        {
+          "file": "playground/_demo/src/styles/theme.css",
+          "hash": "16858590947917829371"
+        },
+        {
+          "file": "playground/_demo/src/typings/index.tsx",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "playground/_demo/tsconfig.json",
+          "hash": "17908795992646786374"
+        }
+      ],
+      "@joey-wallet/wc-core": [
+        {
+          "file": "packages/core/.DS_Store",
+          "hash": "7202121241047953847"
+        },
+        {
+          "file": "packages/core/CHANGELOG.md",
+          "hash": "6090909298775647751"
+        },
+        {
+          "file": "packages/core/config/eslint.config.js",
+          "hash": "1312952925384609309"
+        },
+        {
+          "file": "packages/core/config/knip.json",
+          "hash": "13343474261525912758"
+        },
+        {
+          "file": "packages/core/config/prettier.config.js",
+          "hash": "13844628766452246793"
+        },
+        {
+          "file": "packages/core/config/tsconfig.base.json",
+          "hash": "15832386828157560115"
+        },
+        {
+          "file": "packages/core/config/tsconfig.build.json",
+          "hash": "14841326303450586500"
+        },
+        {
+          "file": "packages/core/config/tsconfig.cjs.json",
+          "hash": "17717030258469890937"
+        },
+        {
+          "file": "packages/core/config/tsconfig.esm.json",
+          "hash": "10635291468357203200"
+        },
+        {
+          "file": "packages/core/config/tsconfig.test.json",
+          "hash": "3462200796059995873"
+        },
+        {
+          "file": "packages/core/eslint.config.js",
+          "hash": "3065424531510763582"
+        },
+        {
+          "file": "packages/core/package.json",
+          "hash": "15011534644197407020",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@jest/globals",
+            "npm:@stylistic/eslint-plugin-js",
+            "npm:@types/big.js",
+            "npm:@types/jest",
+            "npm:@types/lodash",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-config-standard-with-typescript",
+            "npm:eslint-plugin-import-x",
+            "npm:eslint-plugin-n",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-promise",
+            "npm:fs",
+            "npm:globals",
+            "npm:jest",
+            "npm:lodash",
+            "npm:prettier",
+            "npm:ts-jest",
+            "npm:ts-morph",
+            "npm:ts-node",
+            "npm:tsc-alias",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "@joey-wallet/wc-utils",
+            "npm:@reown/appkit",
+            "npm:@walletconnect/types@2.21.5",
+            "npm:@walletconnect/universal-provider",
+            "npm:@walletconnect/utils",
+            "npm:eventemitter3",
+            "npm:idb",
+            "npm:xrpl",
+            "npm:zod@4.0.10"
+          ]
+        },
+        {
+          "file": "packages/core/src/adapter/chains.ts",
+          "hash": "4267116691818451619"
+        },
+        {
+          "file": "packages/core/src/common/base.ts",
+          "hash": "519932730254407025"
+        },
+        {
+          "file": "packages/core/src/common/constants/chains/index.ts",
+          "hash": "8704006492829985221"
+        },
+        {
+          "file": "packages/core/src/common/constants/chains/xrpl.ts",
+          "hash": "14023136999513041908"
+        },
+        {
+          "file": "packages/core/src/common/constants/index.ts",
+          "hash": "9013175745873832888"
+        },
+        {
+          "file": "packages/core/src/common/constants/metadata.ts",
+          "hash": "18159813182709058910"
+        },
+        {
+          "file": "packages/core/src/common/constants/wallets/index.ts",
+          "hash": "6615893843873764046"
+        },
+        {
+          "file": "packages/core/src/common/index.ts",
+          "hash": "12009854969494215746"
+        },
+        {
+          "file": "packages/core/src/common/methods.ts",
+          "hash": "12012787043128597803"
+        },
+        {
+          "file": "packages/core/src/common/opts.ts",
+          "hash": "6813417573858013572"
+        },
+        {
+          "file": "packages/core/src/index.ts",
+          "hash": "10837183977177479647"
+        },
+        {
+          "file": "packages/core/src/manager.ts",
+          "hash": "4577826452622111123"
+        },
+        {
+          "file": "packages/core/src/methods/index.ts",
+          "hash": "12549156686485531328"
+        },
+        {
+          "file": "packages/core/src/methods/signTransaction.ts",
+          "hash": "1165435526253782053"
+        },
+        {
+          "file": "packages/core/src/methods/signTransactionBatch.ts",
+          "hash": "14781569125840770630"
+        },
+        {
+          "file": "packages/core/src/methods/signTransactionFee.ts",
+          "hash": "18037237825246676662"
+        },
+        {
+          "file": "packages/core/src/methods/signTransactionFor.ts",
+          "hash": "6589067378600978379"
+        },
+        {
+          "file": "packages/core/src/provider/api.ts",
+          "hash": "12385145791317733355"
+        },
+        {
+          "file": "packages/core/src/provider/index.ts",
+          "hash": "9075754509526270469"
+        },
+        {
+          "file": "packages/core/src/root.ts",
+          "hash": "10727460373282471161"
+        },
+        {
+          "file": "packages/core/src/session.ts",
+          "hash": "18321952227019462452"
+        },
+        {
+          "file": "packages/core/src/store/index.ts",
+          "hash": "16496300180419923621"
+        },
+        {
+          "file": "packages/core/src/typings/chain.ts",
+          "hash": "12395632821809187701"
+        },
+        {
+          "file": "packages/core/src/typings/config.ts",
+          "hash": "3055270562774241321"
+        },
+        {
+          "file": "packages/core/src/typings/connect.ts",
+          "hash": "8081835088690248148"
+        },
+        {
+          "file": "packages/core/src/typings/events.ts",
+          "hash": "1977192871175925008"
+        },
+        {
+          "file": "packages/core/src/typings/index.ts",
+          "hash": "2739089923108686451"
+        },
+        {
+          "file": "packages/core/src/typings/other.ts",
+          "hash": "12624361120564109955"
+        },
+        {
+          "file": "packages/core/src/utils/config.ts",
+          "hash": "12575466247437619638"
+        },
+        {
+          "file": "packages/core/src/utils/connect.ts",
+          "hash": "5497580590841891599"
+        },
+        {
+          "file": "packages/core/src/utils/general.ts",
+          "hash": "5388542840582641317"
+        },
+        {
+          "file": "packages/core/src/utils/index.ts",
+          "hash": "16657249435441267283"
+        },
+        {
+          "file": "packages/core/src/utils/namespace.ts",
+          "hash": "5848686721191918798"
+        },
+        {
+          "file": "packages/core/src/utils/session.ts",
+          "hash": "13701448689468589392"
+        },
+        {
+          "file": "packages/core/src/utils/storage.ts",
+          "hash": "493076219158900"
+        },
+        {
+          "file": "packages/core/tsconfig.json",
+          "hash": "17199225618646787117"
+        }
+      ]
+    }
+  }
+}

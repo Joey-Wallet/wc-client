@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "declaration": true,
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "lib": ["ES2020", "DOM"],
+    "paths": {
+      "~/*": ["src/*"],
+      "~/tests/*": ["tests/*"]
+    }
+  },
+  "include": ["src", "tests", "scripts", "examples"]
+}

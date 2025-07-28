@@ -1,0 +1,6 @@
+{
+    "$schema": "https://unpkg.com/knip@5/schema.json",
+    "ignore": [".pnpmfile.cjs", "scripts/*.js", "**/root.*.config.*"],
+    "ignoreDependencies": ["esbuild-plugin-file-path-extensions"],
+    "ignoreWorkspaces": ["examples/**", "integrations/**"]
+  }
