@@ -1,44 +1,61 @@
 <template>
-  <div class="demo-container">
-    <div class="card">
-      <h2>Advanced Provider Demo</h2>
-      <p>Using the advanced provider with full WalletConnect core integration.</p>
+  <div class="w-full">
+    <div class="bg-color1 rounded-lg p-6 border border-color6 mb-4 shadow-sm w-full max-w-md transition-all duration-300">
+      <h2 class="text-xl font-semibold mb-4 text-color12">Advanced Provider Demo</h2>
+      <p class="text-color11 mb-4">Using the advanced provider with full WalletConnect core integration.</p>
       
       <!-- Connection Status -->
-      <div v-if="session" class="wallet-info">
-        <h3>Connected!</h3>
-        <div><strong>Chain:</strong> {{ chain }}</div>
-        <div><strong>Accounts:</strong></div>
-        <ul v-if="accounts && accounts.length">
-          <li v-for="account in accounts" :key="account">{{ account }}</li>
+      <div v-if="session" class="bg-color3 border border-color6 rounded-md p-4 mb-4 border-l-4 border-l-green9">
+        <h3 class="text-lg font-semibold text-color12 mb-2">Connected!</h3>
+        <div class="text-color11 mb-1"><strong class="text-color12">Chain:</strong> {{ chain }}</div>
+        <div class="text-color11 mb-2"><strong class="text-color12">Accounts:</strong></div>
+        <ul v-if="accounts && accounts.length" class="list-disc list-inside text-color11 ml-4 mb-2">
+          <li v-for="account in accounts" :key="account" class="break-all overflow-hidden">{{ account }}</li>
         </ul>
-        <div v-if="uri"><strong>URI:</strong> {{ uri.substring(0, 50) }}...</div>
+        <div v-if="uri" class="text-color11 break-all overflow-hidden"><strong class="text-color12">URI:</strong> {{ uri.substring(0, 50) }}...</div>
       </div>
 
       <!-- Error Display -->
-      <div v-if="error" class="error">
-        <strong>Error:</strong> {{ error }}
+      <div v-if="error" class="bg-color3 border border-red9 rounded-md p-4 mb-4 border-l-4 border-l-red9 text-red9">
+        <strong>Error:</strong> <span class="break-words">{{ error }}</span>
       </div>
 
       <!-- Action Buttons -->
-      <div style="display: flex; gap: 1rem; margin: 1rem 0;">
-        <button @click="handleConnect" :disabled="loading || !!session">
+      <div class="flex gap-2 mb-4 flex-col sm:flex-row">
+        <button 
+          @click="handleConnect" 
+          :disabled="loading || !!session"
+          class="rounded-md border px-4 py-2 text-sm font-medium transition-all duration-200 inline-flex items-center justify-center cursor-pointer bg-color1 text-color12 border-color6 hover:bg-color3 hover:border-color8 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
           {{ loading ? 'Connecting...' : 'Connect Wallet' }}
         </button>
         
-        <button @click="handleDisconnect" :disabled="loading || !session">
+        <button 
+          @click="handleDisconnect" 
+          :disabled="loading || !session"
+          class="rounded-md border px-4 py-2 text-sm font-medium transition-all duration-200 inline-flex items-center justify-center cursor-pointer bg-color1 text-color12 border-color6 hover:bg-color3 hover:border-color8 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
           {{ loading ? 'Disconnecting...' : 'Disconnect' }}
         </button>
 
-        <button @click="handleGenerate" :disabled="loading">
+        <button 
+          @click="handleGenerate" 
+          :disabled="loading"
+          class="rounded-md border px-4 py-2 text-sm font-medium transition-all duration-200 inline-flex items-center justify-center cursor-pointer bg-color1 text-color12 border-color6 hover:bg-color3 hover:border-color8 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
           {{ loading ? 'Generating...' : 'Generate QR' }}
         </button>
       </div>
 
       <!-- Chain Selection -->
-      <div v-if="chains && chains.length" style="margin: 1rem 0;">
-        <label for="chain-select"><strong>Switch Chain:</strong></label>
-        <select id="chain-select" :value="chain" @change="handleChainChange">
+      <div v-if="chains && chains.length" class="mb-4">
+        <label for="chain-select" class="text-color12 font-medium mb-2 block">Switch Chain:</label>
+        <select 
+          id="chain-select" 
+          :value="chain" 
+          @change="handleChainChange"
+          class="ml-2 px-2 py-1 rounded-md border border-color6 bg-color1 text-color12 font-inherit"
+        >
           <option v-for="chainId in chains" :key="chainId" :value="chainId">
             {{ chainId }}
           </option>
@@ -46,20 +63,24 @@
       </div>
 
       <!-- QR Code Display -->
-      <div v-if="qrUri" class="qr-container">
-        <div>
-          <h3>Scan QR Code with your wallet:</h3>
-          <div style="background: white; padding: 1rem; border-radius: 8px;">
-            <canvas ref="qrCanvas"></canvas>
+      <div v-if="qrUri" class="flex flex-col items-center justify-center p-6 bg-color1 rounded-md mb-4 border border-color6 text-center">
+        <h3 class="mb-4 text-color12 text-lg font-semibold">Scan with Joey Wallet</h3>
+        <div class="relative bg-white p-4 rounded-xl mb-4 flex justify-center items-center">
+          <canvas ref="qrCanvas"></canvas>
+          <!-- Joey Logo Overlay -->
+          <div class="absolute flex justify-center items-center h-12 w-12 bg-white rounded p-1">
+            <img src="/assets/joey-primary.png" alt="Joey Wallet" class="h-full w-full object-contain" />
           </div>
-          <p style="word-break: break-all; font-size: 0.8em;">{{ qrUri }}</p>
+        </div>
+        <div class="bg-color3 border border-color6 rounded p-3 text-xs text-color11 break-all max-w-full">
+          {{ qrUri }}
         </div>
       </div>
 
       <!-- Session Details -->
-      <div v-if="session" style="margin-top: 2rem;">
-        <h3>Session Details:</h3>
-        <pre>{{ JSON.stringify(session, null, 2) }}</pre>
+      <div v-if="session" class="mt-4">
+        <h3 class="text-lg font-semibold text-color12 mb-2">Session Details:</h3>
+        <pre class="bg-color3 rounded-md p-4 overflow-x-auto overflow-y-auto max-h-96 whitespace-pre-wrap break-words border border-color6 text-sm text-color11">{{ JSON.stringify(session, null, 2) }}</pre>
       </div>
     </div>
   </div>
@@ -68,6 +89,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import { useWalletConnectProvider } from '@joey-wallet/wc-vue'
+import QRCode from 'qrcode'
 
 const loading = ref(false)
 const error = ref<string | null>(null)
@@ -146,33 +168,18 @@ const handleChainChange = (event: Event) => {
 const generateQRCode = async (uri: string) => {
   if (!qrCanvas.value) return
   
-  // Simple QR code placeholder - in a real app you'd use a QR library
-  const canvas = qrCanvas.value
-  const ctx = canvas.getContext('2d')
-  if (!ctx) return
-  
-  canvas.width = 256
-  canvas.height = 256
-  
-  // Fill with white background
-  ctx.fillStyle = 'white'
-  ctx.fillRect(0, 0, 256, 256)
-  
-  // Simple placeholder pattern
-  ctx.fillStyle = 'black'
-  for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
-      if ((i + j) % 2 === 0) {
-        ctx.fillRect(i * 16, j * 16, 16, 16)
+  try {
+    await QRCode.toCanvas(qrCanvas.value, uri, {
+      width: 300,
+      margin: 2,
+      color: {
+        dark: '#000000',
+        light: '#FFFFFF'
       }
-    }
+    })
+  } catch (error) {
+    console.error('Failed to generate QR code:', error)
   }
-  
-  // Add text
-  ctx.fillStyle = 'blue'
-  ctx.font = '12px Arial'
-  ctx.textAlign = 'center'
-  ctx.fillText('QR Placeholder', 128, 280)
 }
 
 watch(() => qrUri.value, (newUri) => {
@@ -195,26 +202,3 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-.demo-container {
-  width: 100%;
-}
-
-select {
-  margin-left: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: white;
-  color: black;
-}
-
-.qr-container {
-  text-align: center;
-  color: black;
-}
-
-.qr-container h3 {
-  color: white;
-}
-</style>

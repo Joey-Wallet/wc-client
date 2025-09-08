@@ -1,0 +1,21 @@
+/* @import url('./_fonts.css'); */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+:root {
+  border-style: none;
+}
+
+.h-screen {
+  height: 100vh;
+  height: 100svh;
+}
