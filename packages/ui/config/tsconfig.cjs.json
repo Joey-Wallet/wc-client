@@ -1,22 +1,9 @@
 {
-  "display": "Build",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "..",
-    "baseUrl": "..",
-    "outDir": "../dist/cjs",
-    "target": "ES2020",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": true,
-    "declaration": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "lib": ["ES2020", "DOM"],
-    "paths": {
-      "~/*": ["src/*"]
-    }
-  },
-  "include": ["../src"]
+    "outDir": "../dist/cjs",
+    "rootDir": "../src"
+  }
 }

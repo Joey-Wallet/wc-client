@@ -15,6 +15,10 @@
     "@jest/globals": "^30.0.4",
     "@nx/devkit": "^21.2.4",
     "@nx/js": "21.2.4",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.3",
+    "vite-plugin-dts": "^4.3.0",
     "@stylistic/eslint-plugin-js": "^4.4.1",
     "@swc-node/register": "~1.10.10",
     "@swc/core": "~1.13.0",
@@ -54,19 +58,19 @@
     "yargs": "^18.0.0"
   },
   "scripts": {
+    "build": "nx run-many -t build --projects=packages/*",
+    "build:playground": "nx run-many -t build --projects=playground/*",
+    "dev": "nx run-many -t dev --projects=packages/*",
+    "type-check": "nx run-many -t type-check --projects=packages/*",
+    "lint": "nx run-many -t lint --projects=packages/*",
+    "format": "nx run-many -t format --projects=packages/*",
+    "test": "nx run-many -t test --projects=packages/*",
+    "clean": "nx reset && rm -rf packages/*/dist packages/*/node_modules",
+    "release": "pnpm build && pnpm run bin:release",
+    "bin:release": "pnpm run env -- node ./scripts/release.js",
     "env": "dotenv",
     "env:prod": "dotenv -e production",
-    "-----": "",
     "test:knip": "knip --config ./config/knip.json",
-    "test:sherif": "sherif -i typescript",
-    "--------": "",
-    "bin:release": "pnpm run env -- node ./scripts/release.js",
-    "---------": "",
-    "release": "pnpm build:deps && pnpm bin:release",
-    "build": "pnpm nx run-many -t build",
-    "build:deps": "pnpm nx run-many -t build --projects=packages/*",
-    "build:playground": "pnpm nx run-many -t build --projects=playground/*",
-    "dev": "nx watch --all -- sh -c 'echo $NX_PROJECT_NAME $NX_FILE_CHANGES; ./scripts/nx-watch.sh'",
-    "dev:deps": "nx watch --projects=packages/* -- sh -c 'echo $NX_PROJECT_NAME $NX_FILE_CHANGES; ./scripts/nx-watch.sh'"
+    "test:sherif": "sherif -i typescript"
   }
 }

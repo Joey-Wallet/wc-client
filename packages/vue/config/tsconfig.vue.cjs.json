@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Vue CJS Build",
+  "compilerOptions": {
+    "rootDir": "../src",
+    "baseUrl": "..",
+    "outDir": "../dist/vue/cjs/src",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["../src"]
+}

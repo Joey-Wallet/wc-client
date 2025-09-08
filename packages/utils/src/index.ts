@@ -17,4 +17,5 @@ export {
 } from './lib';
 
 export { Logger } from './logger';
-export { Logger as AdvancedLogger, TVerbose } from './logger/advanced';
+export { Logger as AdvancedLogger } from './logger/advanced';
+export type { TVerbose } from './logger/advanced';

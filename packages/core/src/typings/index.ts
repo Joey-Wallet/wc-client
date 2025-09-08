@@ -4,11 +4,11 @@ export * as config from './other';
 export * as events from './events';
 export * as connect from './connect';
 
-export { IConfig as ProviderConfig } from './config';
-export { ChainDetails } from './config';
+export type { IConfig as ProviderConfig } from './config';
+export type { ChainDetails } from './config';
 
 export { EProviderEvents } from './events';
-export {
+export type {
   Metadata,
   WalletDetail,
   EnhancedNamespace,
@@ -16,7 +16,7 @@ export {
   NamespaceKey,
 } from './other';
 
-export {
+export type {
   TConnectionOpts as ConnectionOpts,
   IConnectionDetails as CnnectionDetails,
 } from './connect';

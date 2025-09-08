@@ -1,15 +1,29 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Build Configuration",
   "extends": "./tsconfig.base.json",
-  "display": "Build",
   "compilerOptions": {
     "rootDir": "..",
     "baseUrl": "..",
-    "outDir": "../dist",
-    "module": "preserve",
+    "outDir": "../dist/types",
+    "module": "esnext",
     "moduleResolution": "bundler",
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "composite": false,
     "paths": {
       "~/*": ["src/*"]
     }
   },
-  "include": ["../src"]
+  "include": ["../packages/*/src/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build", 
+    ".nx",
+    "coverage",
+    "**/*.spec.*",
+    "**/*.test.*"
+  ]
 }

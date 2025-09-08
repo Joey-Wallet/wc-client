@@ -1,0 +1,49 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "../dist/cjs",
+    "declarationDir": "../dist/cjs",
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+    "isolatedModules": true,
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../src",
+    "rootDir": "../src",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@joey-wallet/wc-utils": ["../node_modules/@joey-wallet/wc-utils/dist/cjs"],
+      "@joey-wallet/wc-core": ["../node_modules/@joey-wallet/wc-core/dist/cjs"]
+    }
+  },
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".nx",
+    "coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
+}

@@ -1,22 +1,11 @@
 {
-  "display": "Build",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "..",
-    "baseUrl": "..",
-    "outDir": "../dist/esm",
-    "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": true,
+    "outDir": "../dist/esm",
+    "rootDir": "../src",
     "declaration": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "lib": ["ES2020", "DOM"],
-    "paths": {
-      "~/*": ["src/*"]
-    }
-  },
-  "include": ["../src"]
+    "declarationDir": "../dist/esm"
+  }
 }

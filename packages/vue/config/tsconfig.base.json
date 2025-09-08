@@ -1,0 +1,47 @@
+{
+  "extends": "../../../config/tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "target": "ES2020",
+    "module": "ESNext",
+    "outDir": "../dist",
+    "declarationDir": "../dist",
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+    "isolatedModules": true,
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../src",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@joey-wallet/wc-utils": ["../node_modules/@joey-wallet/wc-utils"],
+      "@joey-wallet/wc-core": ["../node_modules/@joey-wallet/wc-core"]
+    }
+  },
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".nx",
+    "coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx"
+  ]
+}
