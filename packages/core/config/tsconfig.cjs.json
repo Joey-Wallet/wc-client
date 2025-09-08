@@ -1,30 +1,48 @@
 {
   "extends": "./tsconfig.base.json",
-  "display": "Build",
   "compilerOptions": {
-    "rootDir": "..",
-    "baseUrl": "..",
-    "outDir": "../dist/cjs",
-    "module": "CommonJS",
-    "moduleResolution": "node",
     "target": "ES2020",
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "module": "CommonJS",
+    "outDir": "../dist/cjs",
+    "declarationDir": "../dist/cjs",
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+    "isolatedModules": true,
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../src",
+    "rootDir": "../src",
     "paths": {
-      "~/*": ["src/*"],
-      "@first-ledger/wc-client/core": [
-        "node_modules/@first-ledger/wc-client/dist/cjs/src/core.d.ts"
+      "~/*": [
+        "./*"
       ],
-      "@first-ledger/wc-core/utils": [
-        "node_modules/@first-ledger/wc-core/dist/cjs/src/utils/index.d.ts"
-      ],
-      "@first-ledger/wc-react/standalone": [
-        "node_modules/@first-ledger/wc-react/dist/cjs/src/standalone.d.ts"
-      ]
+      "@joey-wallet/wc-utils": ["../node_modules/@joey-wallet/wc-utils/dist/cjs"]
     }
   },
-  "include": ["../src"]
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".nx",
+    "coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
 }

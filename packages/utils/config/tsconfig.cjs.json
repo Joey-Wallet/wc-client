@@ -1,16 +1,47 @@
 {
   "extends": "./tsconfig.base.json",
-  "display": "Build",
   "compilerOptions": {
-    "rootDir": "..",
-    "baseUrl": "..",
-    "outDir": "../dist/cjs",
-    "module": "CommonJS",
     "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "../dist/cjs",
+    "declarationDir": "../dist/cjs",
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+    "isolatedModules": true,
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../src",
+    "rootDir": "../src",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["../src"]
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".nx",
+    "coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
 }

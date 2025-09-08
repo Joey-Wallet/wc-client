@@ -11,8 +11,8 @@
   ],
   "packageManager": "pnpm@10.4.1",
   "type": "module",
-  "main": "dist/cjs/src/index.js",
-  "types": "dist/cjs/src/index.d.ts",
+  "main": "dist/index.cjs",
+  "types": "dist/types/src/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -20,42 +20,42 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/src/index.d.ts",
-        "default": "./dist/esm/src/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/cjs/src/index.d.ts",
-        "default": "./dist/cjs/src/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.cjs"
       }
     },
     "./core": {
       "import": {
-        "types": "./dist/esm/src/core.d.ts",
-        "default": "./dist/esm/src/core.js"
+        "types": "./dist/types/src/core.d.ts",
+        "default": "./dist/core.js"
       },
       "require": {
-        "types": "./dist/cjs/src/core.d.ts",
-        "default": "./dist/cjs/src/core.js"
+        "types": "./dist/types/src/core.d.ts",
+        "default": "./dist/core.cjs"
       }
     },
     "./utils": {
       "import": {
-        "types": "./dist/esm/src/utils.d.ts",
-        "default": "./dist/esm/src/utils.js"
+        "types": "./dist/types/src/utils.d.ts",
+        "default": "./dist/utils.js"
       },
       "require": {
-        "types": "./dist/cjs/src/utils.d.ts",
-        "default": "./dist/cjs/src/utils.js"
+        "types": "./dist/types/src/utils.d.ts",
+        "default": "./dist/utils.cjs"
       }
     },
     "./react": {
       "import": {
-        "types": "./dist/esm/src/react.d.ts",
-        "default": "./dist/esm/src/react.js"
+        "types": "./dist/types/src/react.d.ts",
+        "default": "./dist/react.js"
       },
       "require": {
-        "types": "./dist/cjs/src/react.d.ts",
-        "default": "./dist/cjs/src/react.js"
+        "types": "./dist/types/src/react.d.ts",
+        "default": "./dist/react.cjs"
       }
     }
   },
@@ -70,11 +70,11 @@
     "postbuild": "rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE",
     "c:esm": "tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json",
     "c:cjs": "tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json",
-    "c": "pnpm c:cjs & pnpm c:esm && tsc-alias",
+    "c": "pnpm c:esm & pnpm c:cjs && tsc-alias",
     "rebuild": "pnpm run c && pnpm postbuild",
     "rebuild:watch": "pnpm run c && pnpm postbuild",
     "------": "",
-    "build": "pnpm prebuild && pnpm run c && pnpm postbuild",
+    "build": "vite build",
     "dev": "pnpm rebuild:watch",
     "gen": "pnpm run tsnode ./scripts/gen.ts && pnpm format",
     "--------": "",

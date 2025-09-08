@@ -11,8 +11,9 @@
   ],
   "packageManager": "pnpm@10.4.1",
   "type": "module",
-  "main": "dist/cjs/src/index.js",
-  "types": "dist/cjs/src/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/types/src/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -20,49 +21,33 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/src/index.d.ts",
-        "default": "./dist/esm/src/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/cjs/src/index.d.ts",
-        "default": "./dist/cjs/src/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.cjs"
       }
     },
     "./standalone": {
       "import": {
-        "types": "./dist/esm/src/standalone.d.ts",
-        "default": "./dist/esm/src/standalone.js"
+        "types": "./dist/types/src/standalone.d.ts",
+        "default": "./dist/standalone.js"
       },
       "require": {
-        "types": "./dist/cjs/src/standalone.d.ts",
-        "default": "./dist/cjs/src/standalone.js"
+        "types": "./dist/types/src/standalone.d.ts",
+        "default": "./dist/standalone.cjs"
       }
     }
   },
   "prettier": "./config/prettier.config.js",
   "scripts": {
-    "env": "dotenv-run",
-    "env:prod": "dotenv-run -e production",
-    "-----": "",
-    "ts": "pnpm tsx --tsconfig config/tsconfig.test.json",
-    "---------": "",
-    "prebuild": "rm -rf ./dist && rm -rf ./build",
-    "postbuild": "rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE",
-    "c:esm": "tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json",
-    "c:cjs": "tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json",
-    "c": "pnpm c:cjs & pnpm c:esm && tsc-alias",
-    "rebuild": "pnpm run c && pnpm postbuild",
-    "rebuild:watch": "pnpm run c && pnpm postbuild",
-    "------": "",
-    "build": "pnpm prebuild && pnpm run c && pnpm postbuild",
-    "dev": "pnpm rebuild:watch",
-    "gen": "pnpm run tsnode ./scripts/gen.ts && pnpm format",
-    "--------": "",
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "type-check": "tsc --noEmit",
     "lint": "eslint src --report-unused-disable-directives",
-    "deps": "dpdm --no-warning --no-tree -T src/index.ts",
     "format": "prettier 'src' --write --list-different",
     "format:check": "prettier 'src' --check",
-    "-------": "",
     "test": "pnpm jest --config ./config/jest.config.ts --all --coverage --forceExit",
     "testOne": "pnpm jest --config ./config/jest.config.ts --coverage --forceExit"
   },

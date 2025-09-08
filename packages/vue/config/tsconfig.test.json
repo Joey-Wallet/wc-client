@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "display": "Test",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": "..",
+    "outDir": "../dist",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "paths": {
+      "~/*": ["src/*"],
+      "~/tests/*": ["tests/*"]
+    }
+  },
+  "include": ["../src", "../tests", "../scripts", "../examples"]
+}

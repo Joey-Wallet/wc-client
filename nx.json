@@ -21,17 +21,6 @@
     ]
   },
   "targetDefaults": {
-    "prepack": {
-      "inputs": ["default"],
-      "dependsOn": [
-        {
-          "target": "prepack",
-          "params": "forward"
-        }
-      ],
-      "cache": true,
-      "outputs": ["{projectRoot}/dist"]
-    },
     "build": {
       "inputs": ["production", "^production"],
       "dependsOn": [
@@ -39,9 +28,7 @@
           "dependencies": true,
           "target": "build",
           "params": "forward"
-        },
-        "prepack",
-        "format"
+        }
       ],
       "outputs": [
         "{projectRoot}/dist",
@@ -49,7 +36,12 @@
         "{projectRoot}/public/build",
         "{projectRoot}/.next"
       ],
-      "cache": true
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vite build",
+        "cwd": "{projectRoot}"
+      }
     },
     "test": {
       "inputs": ["default"],
@@ -58,13 +50,31 @@
     },
     "format": {
       "inputs": ["default"],
-      "dependsOn": ["prepack"],
-      "cache": true
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "prettier 'src' --write --list-different",
+        "cwd": "{projectRoot}"
+      }
     },
     "dev": {
       "inputs": ["default"],
-      "dependsOn": ["prepack, build"],
-      "cache": true
+      "dependsOn": [],
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vite build --watch",
+        "cwd": "{projectRoot}"
+      }
+    },
+    "type-check": {
+      "inputs": ["default"],
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit || vue-tsc --noEmit",
+        "cwd": "{projectRoot}"
+      }
     },
     "lint": {
       "inputs": ["default"],

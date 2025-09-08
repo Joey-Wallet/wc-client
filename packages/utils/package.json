@@ -17,8 +17,9 @@
     "url": "https://github.com/joey-wallet/wc-client/issues"
   },
   "type": "module",
-  "main": "dist/cjs/src/index.js",
-  "types": "dist/cjs/src/index.d.ts",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -26,12 +27,12 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/src/index.d.ts",
-        "default": "./dist/esm/src/index.js"
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/es/index.js"
       },
       "require": {
-        "types": "./dist/cjs/src/index.d.ts",
-        "default": "./dist/cjs/src/index.js"
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
       }
     }
   },
@@ -83,10 +84,10 @@
     "postbuild": "rm -rf .bundle.zip && zip -r .bundle.zip dist src package.json tsconfig.json eslint.config.js config LICENSE",
     "c:esm": "tsc -P config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json",
     "c:cjs": "tsc -P config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json",
-    "c": "pnpm c:cjs & pnpm c:esm && tsc-alias",
+    "c": "pnpm c:esm & pnpm c:cjs && tsc-alias",
     "rebuild": "pnpm run c && pnpm postbuild",
     "------": "",
-    "build": "pnpm prebuild && pnpm run c && pnpm postbuild",
+    "build": "vite build",
     "dev": "pnpm rebuild:watch",
     "gen": "pnpm run tsnode ./scripts/gen.ts && pnpm format",
     "--------": "",

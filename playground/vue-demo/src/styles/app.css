@@ -1,0 +1,4 @@
+/* Main app styles - matches React demo structure */
+@import './theme.css';
+@import './root.css';
+@import './scrollbar.css';

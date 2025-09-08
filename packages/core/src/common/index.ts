@@ -1,6 +1,6 @@
 export * as constants from './constants';
-export {
-  Opts,
+export type { Opts } from './opts';
+export type {
   TProposal,
   TProposalHandler,
   TRequestHandler,
@@ -8,6 +8,6 @@ export {
   TUserDefinedHandlers,
 } from './opts';
 
-export { IContext, IMethodConditional } from './methods';
+export type { IContext, IMethodConditional } from './methods';
 
 export * as base from './base';
