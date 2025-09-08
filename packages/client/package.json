@@ -11,8 +11,8 @@
   ],
   "packageManager": "pnpm@10.4.1",
   "type": "module",
-  "main": "dist/cjs/index.js",
-  "types": "dist/cjs/index.d.ts",
+  "main": "dist/index.cjs",
+  "types": "dist/types/src/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -20,42 +20,42 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.cjs"
       }
     },
     "./core": {
       "import": {
-        "types": "./dist/esm/core.d.ts",
-        "default": "./dist/esm/core.js"
+        "types": "./dist/types/src/core.d.ts",
+        "default": "./dist/core.js"
       },
       "require": {
-        "types": "./dist/cjs/core.d.ts",
-        "default": "./dist/cjs/core.js"
+        "types": "./dist/types/src/core.d.ts",
+        "default": "./dist/core.cjs"
       }
     },
     "./utils": {
       "import": {
-        "types": "./dist/esm/utils.d.ts",
-        "default": "./dist/esm/utils.js"
+        "types": "./dist/types/src/utils.d.ts",
+        "default": "./dist/utils.js"
       },
       "require": {
-        "types": "./dist/cjs/utils.d.ts",
-        "default": "./dist/cjs/utils.js"
+        "types": "./dist/types/src/utils.d.ts",
+        "default": "./dist/utils.cjs"
       }
     },
     "./react": {
       "import": {
-        "types": "./dist/esm/react.d.ts",
-        "default": "./dist/esm/react.js"
+        "types": "./dist/types/src/react.d.ts",
+        "default": "./dist/react.js"
       },
       "require": {
-        "types": "./dist/cjs/react.d.ts",
-        "default": "./dist/cjs/react.js"
+        "types": "./dist/types/src/react.d.ts",
+        "default": "./dist/react.cjs"
       }
     }
   },

@@ -11,9 +11,9 @@
   ],
   "packageManager": "pnpm@10.4.1",
   "type": "module",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/es/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/types/src/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -21,22 +21,22 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/es/index.js"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/cjs/index.cjs"
+        "types": "./dist/types/src/index.d.ts",
+        "default": "./dist/index.cjs"
       }
     },
     "./standalone": {
       "import": {
-        "types": "./dist/types/standalone.d.ts",
-        "default": "./dist/es/standalone.js"
+        "types": "./dist/types/src/standalone.d.ts",
+        "default": "./dist/standalone.js"
       },
       "require": {
-        "types": "./dist/types/standalone.d.ts",
-        "default": "./dist/cjs/standalone.cjs"
+        "types": "./dist/types/src/standalone.d.ts",
+        "default": "./dist/standalone.cjs"
       }
     }
   },
