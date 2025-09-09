@@ -1,6 +1,6 @@
 {
   "name": "@joey-wallet/wc-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Client for intergrating WalletConnect and the XRP Ledger",
   "author": "Joey Wallet (https://joeywallet.xyz)",
   "license": "MIT",

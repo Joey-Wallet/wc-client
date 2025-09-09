@@ -1,3 +1,9 @@
+## 1.0.2 (2025-09-09)
+
+### Fixes
+
+- remove signFee special transaction type, patch esm resolution ([3b38420](https://github.com/Joey-Wallet/wc-client/commit/3b38420))
+
 ## 1.0.1 (2025-07-28)
 
 ### Fixes
