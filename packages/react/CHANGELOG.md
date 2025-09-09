@@ -1,3 +1,7 @@
+## 1.0.3 (2025-09-09)
+
+This was a version bump only for @joey-wallet/wc-react to align it with other projects, there were no code changes.
+
 ## 1.0.2 (2025-09-09)
 
 ### Fixes
