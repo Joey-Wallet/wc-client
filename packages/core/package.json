@@ -1,6 +1,6 @@
 {
   "name": "@joey-wallet/wc-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Core package for the XRP Ledger WalletConnect client.",
   "author": "Joey Wallet (https://joeywallet.xyz)",
   "license": "MIT",

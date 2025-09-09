@@ -1,6 +1,6 @@
 {
   "name": "@joey-wallet/wc-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React components and utilities for intergrating WalletConnect and the XRP Ledger.",
   "author": "Joey Wallet (https://joeywallet.xyz)",
   "license": "MIT",
