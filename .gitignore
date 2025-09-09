@@ -132,3 +132,10 @@ dist
 .nx/*
 
 **/*.zip
+
+# Ignore environment variables
+*.env
+*.env.production
+*.env.prod
+*.env.local
+*.env.dev
