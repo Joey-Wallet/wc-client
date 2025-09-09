@@ -79,13 +79,4 @@ export class Index {
         methods.signTransactionBatch({ request: payload, provider, chainId })
       );
     });
-
-  signTransactionFee = (payload: methods.signFee.TRequest, opts: common.IMethodConditional) =>
-    kit.asyncCatch(async () => {
-      const { chainId } = opts;
-      this.logger.info('Handling signBatch payload request');
-      return this.precondition(opts).then(({ provider }) =>
-        methods.signTransactionFee({ request: payload, provider, chainId })
-      );
-    });
 }

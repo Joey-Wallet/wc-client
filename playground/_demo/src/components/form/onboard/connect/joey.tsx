@@ -40,6 +40,7 @@ export const handleConnect = async (opts: {
 }) => {
   const { provider, actions, openModal, isMobile = false, triggerModal = () => {} } = opts;
 
+  
   const generate = await actions.generate({
     openModal,
     walletId: core.constants.wallets.joey.projectId,

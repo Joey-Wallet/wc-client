@@ -244,17 +244,5 @@ export class Index extends common.base.Base<'Session'> {
           methods.signTransactionBatch({ request: payload, provider, chainId })
         );
       }),
-
-    signTransactionFee: (
-      payload: methods.signFee.TRequest,
-      opts: Omit<common.IMethodConditional, 'sessionId'>
-    ) =>
-      kit.asyncCatch(async () => {
-        const { chainId } = opts;
-        this.logger.info('Handling fee payload request');
-        return this._head().then((provider) =>
-          methods.signTransactionFee({ request: payload, provider, chainId })
-        );
-      }),
   };
 }
